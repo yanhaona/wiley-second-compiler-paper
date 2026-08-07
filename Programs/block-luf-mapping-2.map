@@ -1,0 +1,8 @@
+\begin{mappingListing}{mapping-luf-2}{Multi-node mapping of block-LU factorization}
+``Block LU Factorization" {
+    Model: CPU Exclusive Model
+    Space A: Rack Level
+    Space B: Node Level
+    Space C: CPU Core Group Level	
+}
+\end{mappingListing}

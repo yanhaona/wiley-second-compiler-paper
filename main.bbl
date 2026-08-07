@@ -1,0 +1,516 @@
+\begin{thebibliography}{66}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[\protect\citeauthoryear{Dongarra and Luszczek}{Dongarra and
+  Luszczek}{}]{Dongarra2011}
+Jack Dongarra, and Piotr Luszczek. 2011.
+\newblock {\it TOP500}, pp.\  2055--2057.
+\newblock Boston, MA: Springer US.
+
+\bibitem[\protect\citeauthoryear{Atchley, Zimmer, Lange, Bernholdt,
+  Melesse~Vergara, Beck, Brim, Budiardja, Chandrasekaran, Eisenbach, Evans,
+  Ezell, Frontiere, Georgiadou, Glenski, Grete, Hamilton, Holmen, Huebl,
+  Jacobson, Joubert, McMahon, Merzari, Moore, Myers, Nichols, Oral,
+  Papatheodore, Perez, Rogers, Schneider, Vay, and Yeung}{Atchley
+  et~al.}{}]{10485138}
+Scott Atchley, Chris Zimmer, John~R. Lange, David~E. Bernholdt, Verónica~G.
+  Melesse~Vergara, Thomas Beck, Michael~J. Brim, Reuben Budiardja, Sunita
+  Chandrasekaran, Markus Eisenbach, Thomas Evans, Matthew Ezell, Nicholas
+  Frontiere, Antigoni Georgiadou, Joe Glenski, Philipp Grete, Steven Hamilton,
+  John Holmen, Axel Huebl, Daniel Jacobson, Wayne Joubert, Kim McMahon, Elia
+  Merzari, Stan~G Moore, Andrew Myers, Stephen Nichols, Sarp Oral, Thomas
+  Papatheodore, Danny Perez, David~M. Rogers, Evan Schneider, Jean-Luc Vay,,
+  and P.K. Yeung. 2023.
+\newblock ``Frontier: Exploring Exascale The System Architecture of the First
+  Exascale Supercomputer.''   In {\it SC23: International Conference for High
+  Performance Computing, Networking, Storage and Analysis},   1--16.
+
+\bibitem[\protect\citeauthoryear{Lilja}{Lilja}{}]{10.1145/158439.158907}
+David~J. Lilja.
+\newblock
+\newblock ``Cache coherence in large-scale shared-memory multiprocessors:
+  issues and comparisons.''  {\it ACM Comput. Surv.\/}~25, no. 3 (1993):
+  303–338.
+
+\bibitem[\protect\citeauthoryear{Snyder}{Snyder}{}]{Snyder:1986:TAS:17814.17826}
+Lawrence Snyder 1986.
+\newblock ``Type Architectures, Shared Memory, and the Corollary of Modest
+  Potential.''   In {\it Annual Review of Computer Science Vol. 1, 1986}, ,
+  edited by Joseph~F. Traub, Barbara~J. Grosz, Butler~W. Lampson, and Nils~J.
+  Nilsson,   289--317.
+\newblock Palo Alto, CA, USA: Annual Reviews Inc.
+
+\bibitem[\protect\citeauthoryear{Gustafson}{Gustafson}{}]{10.1145/42411.42415}
+John~L. Gustafson.
+\newblock
+\newblock ``Reevaluating Amdahl's law.''  {\it Commun. ACM\/}~31, no. 5 (1988):
+  532–533.
+
+\bibitem[\protect\citeauthoryear{Foster}{Foster}{}]{Foster:1995:DBP:527029}
+Ian Foster 1995.
+\newblock {\it Designing and Building Parallel Programs: Concepts and Tools for
+  Parallel Software Engineering},
+\newblock Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc.
+
+\bibitem[\protect\citeauthoryear{Walker, Walker, Dongarra, and Dongarra}{Walker
+  et~al.}{}]{Walker96mpi:a}
+David~W. Walker, David~W. Walker, Jack~J. Dongarra,, and Jack~J. Dongarra.
+\newblock
+\newblock ``MPI: A Standard Message Passing Interface.''  {\it
+  Supercomputer\/}12 (1996): 56--68.
+
+\bibitem[\protect\citeauthoryear{Butenhof}{Butenhof}{}]{10.5555/263953}
+David~R. Butenhof 1997.
+\newblock {\it Programming with POSIX Threads},
+\newblock USA: Addison-Wesley Longman Publishing Co., Inc.
+
+\bibitem[\protect\citeauthoryear{Nickolls, Buck, Garland, and Skadron}{Nickolls
+  et~al.}{}]{Nickolls:2008:SPP:1365490.1365500}
+John Nickolls, Ian Buck, Michael Garland,, and Kevin Skadron.
+\newblock
+\newblock ``Scalable Parallel Programming with CUDA.''  {\it Queue\/}~6, no. 2
+  (2008): 40--53.
+
+\bibitem[\protect\citeauthoryear{Pe\~{n}a, Carvalho, Dinan, Balaji, Thakur, and
+  Gropp}{Pe\~{n}a et~al.}{}]{10.1145/2488551.2488564}
+Antonio~J. Pe\~{n}a, Ralf G.~Correa Carvalho, James Dinan, Pavan Balaji, Rajeev
+  Thakur,, and William Gropp. 2013.
+\newblock ``Analysis of topology-dependent MPI performance on Gemini
+  networks.''   In {\it Proceedings of the 20th European MPI Users' Group
+  Meeting}, EuroMPI '13,   61–66.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Farber}{Farber}{}]{farber2016parallel}
+Rob Farber 2016.
+\newblock {\it Parallel programming with OpenACC},
+\newblock Newnes.
+
+\bibitem[\protect\citeauthoryear{Lin and McIntosh-Smith}{Lin and
+  McIntosh-Smith}{}]{lin2021comparing}
+Wei-Chen Lin, and Simon McIntosh-Smith. 2021.
+\newblock ``Comparing julia to performance portable parallel programming models
+  for hpc.''   In {\it 2021 International Workshop on Performance Modeling,
+  Benchmarking and Simulation of High Performance Computer Systems (PMBS)},
+  94--105.
+\newblock IEEE.
+
+\bibitem[\protect\citeauthoryear{Trott, Lebrun-Grandi{\'e}, Arndt, Ciesko,
+  Dang, Ellingwood, Gayatri, Harvey, Hollman, Ibanez, et~al.}{Trott
+  et~al.}{}]{trott2021kokkos}
+Christian~R Trott, Damien Lebrun-Grandi{\'e}, Daniel Arndt, Jan Ciesko, Vinh
+  Dang, Nathan Ellingwood, Rahulkumar Gayatri, Evan Harvey, Daisy~S Hollman,
+  Dan Ibanez, et~al.
+\newblock
+\newblock ``Kokkos 3: Programming model extensions for the exascale era.''
+  {\it IEEE Transactions on Parallel and Distributed Systems\/}~33, no. 4
+  (2021): 805--817.
+
+\bibitem[\protect\citeauthoryear{Yelick, Bonachea, Chen, Colella, Datta, Duell,
+  Graham, Hargrove, Hilfinger, Husbands, Iancu, Kamil, Nishtala, Su, Welcome,
+  and Wen}{Yelick et~al.}{}]{Yelick:2007:PPU:1278177.1278183}
+Katherine Yelick, Dan Bonachea, Wei-Yu Chen, Phillip Colella, Kaushik Datta,
+  Jason Duell, Susan~L. Graham, Paul Hargrove, Paul Hilfinger, Parry Husbands,
+  Costin Iancu, Amir Kamil, Rajesh Nishtala, Jimmy Su, Michael Welcome,, and
+  Tong Wen. 2007.
+\newblock ``Productivity and Performance Using Partitioned Global Address Space
+  Languages.''   In {\it Proceedings of the 2007 International Workshop on
+  Parallel Symbolic Computation}, PASCO '07,   24--32.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Yanhaona, Grimshaw, and Mickey}{Yanhaona
+  et~al.}{}]{yanhaona2024highp5}
+Muhammad~Nur Yanhaona, Andrew Grimshaw,, and Shahriar~Hasan Mickey.
+\newblock
+\newblock ``HighP5: Programming using Partitioned Parallel Processing Spaces.''
+   {\it Journal of the Brazilian Computer Society\/}~30, no. 1 (2024):
+  653--687.
+
+\bibitem[\protect\citeauthoryear{Alm\'{a}si, Heidelberger, Archer, Martorell,
+  Erway, Moreira, Steinmacher-Burow, and Zheng}{Alm\'{a}si
+  et~al.}{}]{10.1145/1088149.1088183}
+George Alm\'{a}si, Philip Heidelberger, Charles~J. Archer, Xavier Martorell,
+  C.~Chris Erway, Jos\'{e}~E. Moreira, B.~Steinmacher-Burow,, and Yili Zheng.
+  2005.
+\newblock ``Optimization of MPI collective communication on BlueGene/L
+  systems.''   In {\it Proceedings of the 19th Annual International Conference
+  on Supercomputing}, ICS '05,   253–262.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Gong, He, and Zhong}{Gong et~al.}{}]{6490322}
+Yifan Gong, Bingsheng He,, and Jianlong Zhong.
+\newblock
+\newblock ``Network Performance Aware MPI Collective Communication Operations
+  in the Cloud.''  {\it IEEE Transactions on Parallel and Distributed
+  Systems\/}~26, no. 11 (2015): 3079--3089.
+
+\bibitem[\protect\citeauthoryear{Kielmann, Hofman, Bal, Plaat, and
+  Bhoedjang}{Kielmann et~al.}{}]{10.1145/329366.301116}
+Thilo Kielmann, Rutger F.~H. Hofman, Henri~E. Bal, Aske Plaat,, and Raoul A.~F.
+  Bhoedjang.
+\newblock
+\newblock ``MagPIe: MPI's collective communication operations for clustered
+  wide area systems.''  ~34, no. 8 (1999): 131–140.
+
+\bibitem[\protect\citeauthoryear{Sato, Kodama, Tsuji, and Odajima}{Sato
+  et~al.}{}]{sato2021co}
+Mitsuhisa Sato, Yuetsu Kodama, Miwako Tsuji,, and Tesuya Odajima.
+\newblock
+\newblock ``Co-design and system for the supercomputer “Fugaku”.''  {\it
+  IEEE micro\/}~42, no. 2 (2021): 26--34.
+
+\bibitem[\protect\citeauthoryear{McGraw}{McGraw}{}]{osti_10192282}
+J~R McGraw.
+\newblock ``Parallel functional programming in Sisal: Fictions, facts, and
+  future.''  .
+
+\bibitem[\protect\citeauthoryear{Feo, Cann, and Oldehoeft}{Feo
+  et~al.}{}]{FEO1990349}
+John~T. Feo, David~C. Cann,, and Rodney~R. Oldehoeft.
+\newblock
+\newblock ``A report on the sisal language project.''  {\it Journal of Parallel
+  and Distributed Computing\/}~10, no. 4 (1990): 349--366.
+\newblock Data-flow Processing.
+
+\bibitem[\protect\citeauthoryear{McGraw}{McGraw}{}]{10.1145/357153.357157}
+James~R. McGraw.
+\newblock
+\newblock ``The VAL Language: Description and Analysis.''  {\it ACM Trans.
+  Program. Lang. Syst.\/}~4, no. 1 (1982): 44–82.
+
+\bibitem[\protect\citeauthoryear{Gurd}{Gurd}{}]{GURD198549}
+J.R. Gurd.
+\newblock
+\newblock ``The Manchester dataflow machine.''  {\it Computer Physics
+  Communications\/}~37, no. 1 (1985): 49--62.
+
+\bibitem[\protect\citeauthoryear{Veen}{Veen}{}]{10.1145/27633.28055}
+Arthur~H. Veen.
+\newblock
+\newblock ``Dataflow machine architecture.''  {\it ACM Comput. Surv.\/}~18, no.
+  4 (1986): 365–396.
+
+\bibitem[\protect\citeauthoryear{Rieger, Trigg, and Bane}{Rieger
+  et~al.}{}]{10.5555/1623264.1623335}
+Chuck Rieger, Handy Trigg,, and Bob Bane. 1981.
+\newblock ``ZMOB: a new computing engine for AI.''   In {\it Proceedings of the
+  7th International Joint Conference on Artificial Intelligence - Volume 2},
+  IJCAI'81,   955–960.
+\newblock San Francisco, CA, USA: Morgan Kaufmann Publishers Inc.
+
+\bibitem[\protect\citeauthoryear{Wulf and Bell}{Wulf and
+  Bell}{}]{10.1145/1480083.1480098}
+William~A. Wulf, and C.~G. Bell. 1972.
+\newblock ``C.mmp: a multi-mini-processor.''   In {\it Proceedings of the
+  December 5-7, 1972, Fall Joint Computer Conference, Part II}, AFIPS '72
+  (Fall, part II),   765–777.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Hord}{Hord}{}]{hord1982illiac}
+R.M. Hord 1982.
+\newblock {\it The Illiac IV, the First Supercomputer},
+\newblock Digital Systems Design Series. Computer Science Press.
+
+\bibitem[\protect\citeauthoryear{Wolfe}{Wolfe}{}]{10.1145/234313.234417}
+Michael Wolfe.
+\newblock
+\newblock ``Parallelizing compilers.''  {\it ACM Comput. Surv.\/}~28, no. 1
+  (1996): 261–262.
+
+\bibitem[\protect\citeauthoryear{Wilson, French, Wilson, Amarasinghe, Anderson,
+  Tjiang, Liao, Tseng, Hall, Lam, and Hennessy}{Wilson
+  et~al.}{}]{10.1145/193209.193217}
+Robert~P. Wilson, Robert~S. French, Christopher~S. Wilson, Saman~P.
+  Amarasinghe, Jennifer~M. Anderson, Steve W.~K. Tjiang, Shih-Wei Liao,
+  Chau-Wen Tseng, Mary~W. Hall, Monica~S. Lam,, and John~L. Hennessy.
+\newblock
+\newblock ``SUIF: an infrastructure for research on parallelizing and
+  optimizing compilers.''  {\it SIGPLAN Not.\/}~29, no. 12 (1994): 31–37.
+
+\bibitem[\protect\citeauthoryear{Kennedy, Koelbel, and Zima}{Kennedy
+  et~al.}{}]{10.1145/1238844.1238851}
+Ken Kennedy, Charles Koelbel,, and Hans Zima. 2007.
+\newblock ``The rise and fall of High Performance Fortran: an historical object
+  lesson.''   In {\it Proceedings of the Third ACM SIGPLAN Conference on
+  History of Programming Languages}, HOPL III,   7–1–7–22.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Numrich and Reid}{Numrich and
+  Reid}{}]{10.1145/289918.289920}
+Robert~W. Numrich, and John Reid.
+\newblock
+\newblock ``Co-array Fortran for parallel programming.''  {\it SIGPLAN Fortran
+  Forum\/}~17, no. 2 (1998): 1–31.
+
+\bibitem[\protect\citeauthoryear{Loveman}{Loveman}{}]{219857}
+D.B. Loveman.
+\newblock
+\newblock ``High performance Fortran.''  {\it IEEE Parallel & Distributed
+  Technology: Systems & Applications\/}~1, no. 1 (1993): 25--42.
+
+\bibitem[\protect\citeauthoryear{Mehrotra, {Van Rosendale}, and Zima}{Mehrotra
+  et~al.}{}]{MEHROTRA1998325}
+Piyush Mehrotra, John {Van Rosendale},, and Hans Zima.
+\newblock
+\newblock ``High Performance Fortran: History, status and future.''  {\it
+  Parallel Computing\/}~24, no. 3 (1998): 325--354.
+
+\bibitem[\protect\citeauthoryear{Larus}{Larus}{}]{10.1007/3-540-57502-2_56}
+J.~Larus 1993.
+\newblock ``C**: A large-grain, object-oriented, data-parallel programming
+  language.''   In {\it Languages and Compilers for Parallel Computing}, edited
+  by Utpal Banerjee, David Gelernter, Alex Nicolau, and David Padua,
+  326--341.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[\protect\citeauthoryear{Blelloch}{Blelloch}{}]{10.5555/865114}
+Guy~E. Blelloch 1993.
+\newblock ``NESL: A Nested Data-Parallel Language (Version 2.6).''   , USA.
+
+\bibitem[\protect\citeauthoryear{Clarke, Glendinning, and Hempel}{Clarke
+  et~al.}{}]{10.1007/978-3-0348-8534-8_21}
+Lyndon Clarke, Ian Glendinning,, and Rolf Hempel. 1994.
+\newblock ``The MPI Message Passing Interface Standard.''   In {\it Programming
+  Environments for Massively Parallel Distributed Systems}, edited by
+  Karsten~M. Decker and Ren{\'e}~M. Rehmann,   213--218.
+\newblock Basel: Birkh{\"a}user Basel.
+
+\bibitem[\protect\citeauthoryear{Hoare}{Hoare}{}]{10.1145/359576.359585}
+C.~A.~R. Hoare.
+\newblock
+\newblock ``Communicating sequential processes.''  {\it Commun. ACM\/}~21, no.
+  8 (1978): 666–677.
+
+\bibitem[\protect\citeauthoryear{Bernholdt, Boehm, Bosilca, Gorentla~Venkata,
+  Grant, Naughton, Pritchard, Schulz, and Vallee}{Bernholdt
+  et~al.}{}]{https://doi.org/10.1002/cpe.4851}
+David~E. Bernholdt, Swen Boehm, George Bosilca, Manjunath Gorentla~Venkata,
+  Ryan~E. Grant, Thomas Naughton, Howard~P. Pritchard, Martin Schulz,, and
+  Geoffroy~R. Vallee.
+\newblock
+\newblock ``A survey of MPI usage in the US exascale computing project.''  {\it
+  Concurrency and Computation: Practice and Experience\/}~32, no. 3 (2020):
+  e4851.
+\newblock e4851 cpe.4851.
+
+\bibitem[\protect\citeauthoryear{Nickolls, Buck, Garland, and Skadron}{Nickolls
+  et~al.}{}]{10.1145/1365490.1365500}
+John Nickolls, Ian Buck, Michael Garland,, and Kevin Skadron.
+\newblock
+\newblock ``Scalable Parallel Programming with CUDA: Is CUDA the parallel
+  programming model that application developers have been waiting for?.''  {\it
+  Queue\/}~6, no. 2 (2008): 40–53.
+
+\bibitem[\protect\citeauthoryear{Yang, Huang, and Lin}{Yang
+  et~al.}{}]{YANG2011266}
+Chao-Tung Yang, Chih-Lin Huang,, and Cheng-Fang Lin.
+\newblock
+\newblock ``Hybrid CUDA, OpenMP, and MPI parallel programming on multicore GPU
+  clusters.''  {\it Computer Physics Communications\/}~182, no. 1 (2011):
+  266--269.
+\newblock Computer Physics Communications Special Edition for Conference on
+  Computational Physics Kaohsiung, Taiwan, Dec 15-19, 2009.
+
+\bibitem[\protect\citeauthoryear{Jacobsen, Thibault, and Senocak}{Jacobsen
+  et~al.}{}]{doi:10.2514/6.2010-522}
+Dana Jacobsen, Julien Thibault,, and Inanc Senocak. 2010.
+\newblock {\it An MPI-CUDA Implementation for Massively Parallel Incompressible
+  Flow Computations on Multi-GPU Clusters}.
+
+\bibitem[\protect\citeauthoryear{Stamatakis and Ott}{Stamatakis and
+  Ott}{}]{10.1007/978-3-540-88436-1_36}
+Alexandros Stamatakis, and Michael Ott. 2008.
+\newblock ``Exploiting Fine-Grained Parallelism in the Phylogenetic Likelihood
+  Function with MPI, Pthreads, and OpenMP: A Performance Study.''   In {\it
+  Pattern Recognition in Bioinformatics}, edited by Madhu Chetty, Alioune Ngom,
+  and Shandar Ahmad,   424--435.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[\protect\citeauthoryear{Chamberlain, Callahan, and Zima}{Chamberlain
+  et~al.}{}]{doi:10.1177/1094342007078442}
+B.L. Chamberlain, D.~Callahan,, and H.P. Zima.
+\newblock
+\newblock ``Parallel Programmability and the Chapel Language.''  {\it The
+  International Journal of High Performance Computing Applications\/}~21, no. 3
+  (2007): 291--312.
+
+\bibitem[\protect\citeauthoryear{Saraswat, Sarkar, and von Praun}{Saraswat
+  et~al.}{}]{10.1145/1229428.1229483}
+Vijay~A. Saraswat, Vivek Sarkar,, and Christoph von Praun. 2007.
+\newblock ``X10: concurrent programming for modern architectures.''   In {\it
+  Proceedings of the 12th ACM SIGPLAN Symposium on Principles and Practice of
+  Parallel Programming}, PPoPP '07,   271.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Yelick, Semenzato, Pike, Miyamoto, Liblit,
+  Krishnamurthy, Hilfinger, Graham, Gay, Colella, and Aiken}{Yelick
+  et~al.}{}]{titanium}
+Kathy Yelick, Luigi Semenzato, Geoff Pike, Carleton Miyamoto, Ben Liblit,
+  Arvind Krishnamurthy, Paul Hilfinger, Susan Graham, David Gay, Phil Colella,,
+  and Alex Aiken.
+\newblock
+\newblock ``Titanium: a high-performance Java dialect.''  {\it Concurrency:
+  Practice and Experience\/}~10, no. 11-13 (1998): 825--836.
+
+\bibitem[\protect\citeauthoryear{El-Ghazawi and Smith}{El-Ghazawi and
+  Smith}{}]{10.1145/1188455.1188483}
+Tarek El-Ghazawi, and Lauren Smith. 2006.
+\newblock ``UPC: unified parallel C.''   In {\it Proceedings of the 2006
+  ACM/IEEE Conference on Supercomputing}, SC '06,   27–es.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Jose, Luo, Sur, and Panda}{Jose
+  et~al.}{}]{10.1145/2020373.2020378}
+Jithin Jose, Miao Luo, Sayantan Sur,, and Dhabaleswar~K. Panda. 2010.
+\newblock ``Unifying UPC and MPI runtimes: experience with MVAPICH.''   In {\it
+  Proceedings of the Fourth Conference on Partitioned Global Address Space
+  Programming Model}, PGAS '10, New York, NY, USA: Association for Computing
+  Machinery.
+
+\bibitem[\protect\citeauthoryear{Nishtala, Hargrove, Bonachea, and
+  Yelick}{Nishtala et~al.}{}]{5161076}
+Rajesh Nishtala, Paul~H. Hargrove, Dan~O. Bonachea,, and Katherine~A. Yelick.
+  2009.
+\newblock ``Scaling communication-intensive applications on BlueGene/P using
+  one-sided communication and overlap.''   In {\it 2009 IEEE International
+  Symposium on Parallel & Distributed Processing},   1--12.
+
+\bibitem[\protect\citeauthoryear{Chamberlain, Ronaghan, Albrecht, Duncan,
+  Ferguson, Harshbarger, Iten, Keaton, Litvinov, Sahabu, and Titus}{Chamberlain
+  et~al.}{}]{Chamberlain2018ChapelCO}
+Bradford~L. Chamberlain, Elliot Ronaghan, Ben Albrecht, Lydia Duncan,
+  Michael~P. Ferguson, Ben Harshbarger, David Iten, David Keaton, Vassily
+  Litvinov, Preston Sahabu,, and Greg Titus. 2018.
+\newblock ``Chapel Comes of Age : Making Scalable Programming Productive.''   ,
+  .
+
+\bibitem[\protect\citeauthoryear{Zhang, Savant, and Seidel}{Zhang
+  et~al.}{}]{1613273}
+Zhang Zhang, J.~Savant,, and S.~Seidel. 2006.
+\newblock ``A UPC runtime system based on MPI and POSIX threads.''   In {\it
+  14th Euromicro International Conference on Parallel, Distributed, and
+  Network-Based Processing (PDP'06)},   8 pp.--.
+
+\bibitem[\protect\citeauthoryear{Bikshandi, Guo, Hoeflinger, Almasi, Fraguela,
+  Garzar\'{a}n, Padua, and von Praun}{Bikshandi
+  et~al.}{}]{10.1145/1122971.1122981}
+Ganesh Bikshandi, Jia Guo, Daniel Hoeflinger, Gheorghe Almasi, Basilio~B.
+  Fraguela, Mar\'{\i}a~J. Garzar\'{a}n, David Padua,, and Christoph von Praun.
+  2006.
+\newblock ``Programming for parallelism and locality with hierarchically tiled
+  arrays.''   In {\it Proceedings of the Eleventh ACM SIGPLAN Symposium on
+  Principles and Practice of Parallel Programming}, PPoPP '06,   48–57.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Fatahalian, Horn, Knight, Leem, Houston, Park,
+  Erez, Ren, Aiken, Dally, and Hanrahan}{Fatahalian
+  et~al.}{}]{10.1145/1188455.1188543}
+Kayvon Fatahalian, Daniel~Reiter Horn, Timothy~J. Knight, Larkhoon Leem, Mike
+  Houston, Ji~Young Park, Mattan Erez, Manman Ren, Alex Aiken, William~J.
+  Dally,, and Pat Hanrahan. 2006.
+\newblock ``Sequoia: programming the memory hierarchy.''   In {\it Proceedings
+  of the 2006 ACM/IEEE Conference on Supercomputing}, SC '06,   83–es.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Bauer, Treichler, Slaughter, and Aiken}{Bauer
+  et~al.}{}]{10.5555/2388996.2389086}
+Michael Bauer, Sean Treichler, Elliott Slaughter,, and Alex Aiken. 2012.
+\newblock ``Legion: expressing locality and independence with logical
+  regions.''   SC '12, Washington, DC, USA: IEEE Computer Society Press.
+
+\bibitem[\protect\citeauthoryear{Yanhaona and Grimshaw}{Yanhaona and
+  Grimshaw}{}]{Yanhaona:2015:RTA:2723772.2723774}
+Muhammad~N. Yanhaona, and Andrew~S. Grimshaw. 2015.
+\newblock ``A Roadmap for a Type Architecture Based Parallel Programming
+  Language.''   In {\it Proceedings of the 2015 International Workshop on Code
+  Optimisation for Multi and Many Cores}, COSMIC '15,   7:1--7:10.
+\newblock New York, NY, USA: ACM.
+
+\bibitem[\protect\citeauthoryear{Augonnet, Thibault, Namyst, and
+  Wacrenier}{Augonnet et~al.}{}]{augonnet2009starpu}
+C{\'e}dric Augonnet, Samuel Thibault, Raymond Namyst,, and Pierre-Andr{\'e}
+  Wacrenier. 2009.
+\newblock ``StarPU: a unified platform for task scheduling on heterogeneous
+  multicore architectures.''   In {\it European Conference on Parallel
+  Processing},   863--874.
+\newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Gayatri, Olivier, Trott, Doerfert, Ciesko, and
+  Lebrun-Grandie}{Gayatri et~al.}{}]{gayatri2023kokkos}
+Rahulkumar Gayatri, Stephen~L Olivier, Christian~R Trott, Johannes Doerfert,
+  Jan Ciesko,, and Damien Lebrun-Grandie. 2023.
+\newblock ``The Kokkos OpenMPTarget backend: implementation and lessons
+  learned.''   In {\it International Workshop on OpenMP},   99--113.
+\newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Valero-Lara, Lee, Gonzalez-Tallada, Denny, and
+  Vetter}{Valero-Lara et~al.}{}]{valero2022kokkacc}
+Pedro Valero-Lara, Seyong Lee, Marc Gonzalez-Tallada, Joel Denny,, and
+  Jeffrey~S Vetter. 2022.
+\newblock ``Kokkacc: Enhancing kokkos with openacc.''   In {\it 2022 Workshop
+  on Accelerator Programming Using Directives (WACCPD)},   32--42.
+\newblock IEEE.
+
+\bibitem[\protect\citeauthoryear{Teichgr{\"a}ber}{Teichgr{\"a}ber}{}]{teichgraber2022julia}
+Jim~MR Teichgr{\"a}ber 2022.
+\newblock ``Julia: A competitive high-level choice for performance portability
+  in HPC.''   In {\it Seminar (Performance) Portable Programming of HPC
+  Applications}, .
+
+\bibitem[\protect\citeauthoryear{Wirth}{Wirth}{}]{wirth1974design}
+Niklaus Wirth 1974.
+\newblock ``On the Design of Programming Languages..''   In {\it IFIP
+  Congress}, Vol~74,   386--393.
+
+\bibitem[\protect\citeauthoryear{Kamil and Yelick}{Kamil and
+  Yelick}{}]{kamil2013hierarchical}
+Amir Kamil, and Katherine Yelick. 2013.
+\newblock ``Hierarchical computation in the SPMD programming model.''   In {\it
+  International Workshop on Languages and Compilers for Parallel Computing},
+  3--19.
+\newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Yanhaona and Grimshaw}{Yanhaona and
+  Grimshaw}{}]{yanAndrewPCubeS}
+Muhammad~N. Yanhaona, and Andrew~S. Grimshaw. 2014.
+\newblock ``The Partitioned Parallel Processing Spaces (PCubeS) Type
+  Architecture.''   , Technical Report, UVA Computer Science.
+
+\bibitem[\protect\citeauthoryear{Rajaraman}{Rajaraman}{}]{Rajaraman2023}
+V.~Rajaraman.
+\newblock
+\newblock ``Frontier --- World's First ExaFLOPS Supercomputer.''  {\it
+  Resonance\/}~28, no. 4 (2023): 567--576.
+
+\bibitem[\protect\citeauthoryear{Hiranandani, Kennedy, Koelbel, Kremer, and
+  Tseng}{Hiranandani et~al.}{}]{10.1007/BFb0038655}
+S.~Hiranandani, K.~Kennedy, C.~Koelbel, U.~Kremer,, and C.~W. Tseng. 1992.
+\newblock ``An overview of the Fortran D programming system.''   In {\it
+  Languages and Compilers for Parallel Computing}, edited by Utpal Banerjee,
+  David Gelernter, Alex Nicolau, and David Padua,   18--34.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[\protect\citeauthoryear{Pfister and Norton}{Pfister and
+  Norton}{}]{6312198}
+Gregory~F. Pfister, and V.~Alan Norton.
+\newblock
+\newblock ``“Hot spot” contention and combining in multistage
+  interconnection networks.''  {\it IEEE Transactions on Computers\/}~C-34, no.
+  10 (1985): 943--948.
+
+\bibitem[\protect\citeauthoryear{Matsuoka}{Matsuoka}{}]{9492415}
+Satoshi Matsuoka 2021.
+\newblock ``Fugaku and A64FX: the First Exascale Supercomputer and its
+  Innovative Arm CPU.''   In {\it 2021 Symposium on VLSI Circuits},   1--3.
+
+\bibitem[\protect\citeauthoryear{Sato, Kodama, Tsuji, and Odajima}{Sato
+  et~al.}{}]{9658212}
+Mitsuhisa Sato, Yuetsu Kodama, Miwako Tsuji,, and Tesuya Odajima.
+\newblock
+\newblock ``Co-Design and System for the Supercomputer “Fugaku”.''  {\it
+  IEEE Micro\/}~42, no. 2 (2022): 26--34.
+
+\end{thebibliography}

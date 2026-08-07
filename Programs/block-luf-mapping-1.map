@@ -1,0 +1,8 @@
+\begin{mappingListing}{mapping-luf-1}{Single node mapping of block-LU factorization}
+``Block LU Factorization" {
+    Model: CPU Exclusive Model
+    Space A: Node Level
+    Space B: NUMA Level
+    Space C: CPU Core Level	
+}
+\end{mappingListing}

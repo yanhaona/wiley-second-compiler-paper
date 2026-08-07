@@ -1,0 +1,1060 @@
+\documentclass[ASNA,twocolumn]{USG} %twocolumn
+\usepackage{anyfontsize} %
+
+\usepackage{colortbl}   % For coloring table lines
+\usepackage{xcolor}     % For color definitions
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[misc,geometry]{ifsym} 
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\usepackage{academicons}
+\usepackage{color}
+\usepackage{hyperref} 
+\usepackage{aas_macros}
+\usepackage[bottom]{footmisc}
+\usepackage{supertabular}
+\usepackage{afterpage}
+\usepackage{url}
+\usepackage{pifont}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% Configuration begins for listing -----------------------------------------------------------------
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{fancyvrb}
+\fvset{frame=double,framesep=2mm,fontfamily=courier,
+	fontsize=\scriptsize,
+	framerule=.3mm,
+	numbersep=1mm,
+	commandchars=\\\{\}}
+
+\lstdefinelanguage{IT} {
+	morekeywords={Program, Task, Function, Type},
+	morekeywords={[2]Define, Initialize, Environment, Stages, Computation, Partition, Compute},
+	morekeywords={[3]new, if, else, do, for, in, step, sequence, at, while, and, or, foreach, from, of, current},
+	morekeywords={[4]Repeat, Where, Epoch, Activate},
+	morekeywords={[5]divides, partitions, Sub, sub, partitioned, un, ordered, unordered, partition, replicated},
+	morekeywords={[6]Space, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z},
+	morekeywords={[7]link, link_or_create, create},
+	morekeywords={[8]name, task, environment, partition, initialize},
+	morekeywords={[9]@Extern, @Language, @Libraries, @Includes},
+	morekeywords={[10]Kernel},
+	sensitive=true,
+	morecomment=[l]{//},
+	morestring=[b]''
+}
+
+\lstdefinelanguage{intermIT} {
+	morekeywords={Flow_Initialization, Flow_Stage},
+	morekeywords={[2]Space},
+	morekeywords={[3]R, W, move, to, comm, root},
+	sensitive=true,
+	morecomment=[l]{//}
+}
+
+\lstdefinelanguage{mappingIT} {
+	morekeywords={mapping, task, model, lps, id, pps, no},
+	morekeywords={[2]Space, Model, Root},
+	morekeywords={[3]A, B, C, D, E, F, Z},
+	sensitive=true,
+	morecomment=[l]{//}
+}
+
+\lstnewenvironment{codeExampleListing}[2] {
+	\lstset{language=IT,                basicstyle={\footnotesize\singlespacing},            keywordstyle={\footnotesize\itshape\color[rgb]{0.1,0.1,0.9}},
+		keywordstyle=[2]{\footnotesize\itshape\color[rgb]{0.9,0.1,0.1}},
+		keywordstyle=[3]{\itshape},
+		keywordstyle=[4]{\bf\itshape\color[rgb]{0.2,0.5,0.9}},
+		keywordstyle=[5]{\itshape},
+		keywordstyle=[6]{\ttfamily\bfseries\color[rgb]{0.0,0.2,0.9}},
+		keywordstyle=[7]{\itshape},
+		keywordstyle=[8]{\itshape},
+		keywordstyle=[9]{\ttfamily\bfseries\color[rgb]{0.5,0.2,0.9}},
+		keywordstyle=[10]{\scriptsize\itshape\color[rgb]{0.1,0.1,0.9}},
+		numbers=left,
+		tabsize=2,
+		numbersep=1pt,
+		basewidth=0.48em,
+		commentstyle=\color[rgb]{0.1,0.4,0.1},
+		captionpos=b,
+		label=#1, caption=#2
+	}
+}{}
+
+\lstnewenvironment{explanationListing}[3] {
+	\lstset{language=IT,
+		tabsize=4,
+		basicstyle={#3\singlespacing},
+		keywordstyle={\itshape\color[rgb]{0.1,0.1,0.9}},
+		keywordstyle=[2]{\itshape\color[rgb]{0.9,0.1,0.1}},
+		keywordstyle=[3]{\itshape},
+		keywordstyle=[4]{\bf\itshape\color[rgb]{0.2,0.5,0.9}},
+		keywordstyle=[5]{\itshape},
+		keywordstyle=[6]{\ttfamily\bfseries},
+		keywordstyle=[7]{\itshape},
+		keywordstyle=[8]{\itshape},
+		keywordstyle=[9]{\ttfamily\bfseries\color[rgb]{0.5,0.2,0.9}},
+		keywordstyle=[10]{\itshape\color[rgb]{0.1,0.1,0.9}},
+		numbers=none,
+		numbersep=1pt,
+		basewidth=0.48em,
+		commentstyle=\color[rgb]{0.1,0.4,0.1},
+		captionpos=b,
+		label=#1, caption=#2
+	}
+}{}  
+
+\lstnewenvironment{mappingListing}[2] {
+	\lstset{language=mappingIT,
+		basicstyle={\footnotesize\singlespacing},
+		keywordstyle={\itshape\color[rgb]{0.1,0.1,0.9}},
+		keywordstyle=[2]{\itshape\color[rgb]{0.9,0.1,0.1}},
+		keywordstyle=[3]{\itshape},
+		numbers=none,
+		tabsize=4,
+		basewidth=0.48em,
+		commentstyle=\color[rgb]{0.1,0.4,0.1},
+		captionpos=b,
+		label=#1, caption=#2
+	}
+}{}
+
+\lstnewenvironment{interimC}[2] {
+	\lstset{language=C,
+		basicstyle={\footnotesize\singlespacing},
+		keywordstyle={\itshape\color[rgb]{0.1,0.1,0.9}},
+		numbers=left,
+		numbersep=1pt,
+		tabsize=2,
+		basewidth=0.48em,
+		commentstyle=\color[rgb]{0.1,0.4,0.1},
+		captionpos=b,
+		label=#1, caption=#2
+	}
+}{}
+
+% Configuration ends for listing ------------------------------------------------------------------
+
+
+\usepackage{steinmetz}
+%\graphicspath{{./images/}}
+%\specialissue{Morphologic Hard and Soft Tissue Changes following Tooth
+%Extraction in Different Maxilla and Mandible Anatomic Areas: Current
+%Knowledge, Prognostic Factors Analysis, and Clinical Management}
+
+\articletype{ORIGINAL ARTICLE}%
+\subarticletype{High-performance Computing}
+
+%\received{20 January 2023}
+%\revised{21 January 2023}
+%\accepted{22 January 2023}
+\journal{Concurrency and Computation: Practice and Experience}
+%\volume{0}
+%\copyyear{2026}
+\startpage{1}
+%\articledoi{10.1002/0000}
+
+%\raggedbottom
+
+%%
+%\renewcommand\ShowFrameLinethickness{0.15pt}
+%\renewcommand*\ShowFrameColor{\color{red}}
+
+
+\begin{document}
+\title{HighP5 Compiler for Hierarchical Distributed Memory Machines}
+%\subtitle{Subtitle}
+\transtitle{HighP5 Compiler for Hierarchical Distributed Memory Machines}
+%\subtranstitle{trans-subtitle}
+\author[1]{Anna C. Belkina}[https://orcid.org/0000-0001-7037-2721][\facebook{https://www.facebook.com} \linkedin{https://www.linkedin.com} \twitter{https://www.twitter.com}]
+\author[2]{Caroline E. Roe}
+\author[3]{Vera A. Tang}[https://orcid.org/0000-0001-7037-2721]
+\author[4]{Jessica B. Back}[https://orcid.org/0000-0001-7037-2721]
+\author[2]{Claudia Bispo}[https://orcid.org/0000-0001-7037-2721]
+%\author[6]{Alexis Conway}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[7]{Uttara Chakraborty}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[8]{Kathleen T. Daniels}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[9]{Gelo de la Cruz}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[10]{Laura Ferrer-Font}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[11]{Andrew Filby}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[12]{David M. Gravano}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[13]{Michael D. Gregory}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[14]{Christopher Hall}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[15]{Christian Kukat}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[16]{André Mozes}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[17]{Diana Ordoñez-Rueda}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[18]{Eva Orlowski-Oliver}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[19]{Isabella Pesce}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[20]{Ziv Porat}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[21]{Nicole J. Poulton}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[22]{Kristen M. Reifel}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[23]{Aja M. Rieger}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[24]{Rachael T. C. Sheridan}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[25]{Gert Van Isterdael}[https://orcid.org/0000-0001-7037-2721]
+
+%\author[14]{Rachael V. Walker}[https://orcid.org/0000-0001-7037-2721]
+
+\authormark{yanhaona \textsc{et al.}}
+\titlemark{HighP5 Compiler for Hierarchical Distributed Memory Machines}
+
+\address[1]{\orgdiv{Key Laboratory for Ecological Metallurgy of Multimetallic Mineral of Ministry of Education, }\orgname{Institution Name, }%
+\orgaddress{\state{State Name, }\country{Country Name}}}
+
+\address[2]{\orgdiv{Department Name, }\orgname{Institution Name, }%
+\orgaddress{\state{State Name, }\country{Country Name}}}
+
+\address[3]{\orgdiv{Department Name, }\orgname{Institution Name, }%
+\orgaddress{\state{State Name, }\country{Country Name}}}
+
+\address[4]{\orgdiv{Department Name, }\orgname{Institution Name, }%
+\orgaddress{\state{State Name, }\country{Country Name}}}
+
+\corres{Mark Taylor  (\email{zhangh@mail.neu.edu.cn}) ~|~ Pengyue D. Gue (\email{Second.Author@charlte.de})}
+
+\editor{\textbf{Academic Editor:} Alex ~|~ \textbf{Guest Editor:} Andrew A. Rooney}
+
+\presentaddress{This is sample for present address text this is sample for present address text.}
+
+\fundingInfo{National Key Research and Development Program of China, Grant/Award Number: 2021YFB1715500; National Natural Science Foundation of
+China, Grant/Award Number: 12072071; Scientific Research Foundation of Hunan Provincial Education Department, Grant/Award Number: 22A0104;
+Fundamental Research Funds for the Central Universities, Grant/Award Number: N2225027.}
+
+\keywords{DEM | flexible cylindrical particle | internal friction angle | particle deformation | shear stress}
+
+\transkeywords{DEM | flexible cylindrical particle | internal friction angle | particle deformation | shear stress}
+
+\abstract[ABSTRACT]{The landscape of high performance parallel computing is currently dominated by distributed, hierarchical machines. Supercomputers and computer clusters now connect multicore processors with local memories through high-speed networks where both the former and the latter are themselves hierarchical in nature due to multi-level caches in NUMA-nodes and complex inter-connection topologies among server racks and cabinets. Careful data and computation placement, low-overhead shared-data synchronization within cores of a node, and optimized communication across nodes over the network are critical for good program performance in present-day machines. For HighP5 programming language, all these aspects are challenging compilation issues as HighP5 is a declarative programming language where programmers write a pseudocode-like parallel program where only intensions regarding these aspects are specified and their proper implementation is left for the compiler to determine. This article discusses how the HighP5 compiler solves the issues related to efficient memory-management, intra-node synchronization, and communication in hierarchical distributed machines and compares performance of HighP5 executables for some building block reference problems against optimized hand-written MPI codes. Although the design decisions and algorithmic elements discussed in this writing are part of the HighP5 compiler; they are generic enough to apply to any parallel programming language that works in distributed, hierarchical machines and wants to abstract away data synchronization and communication operations from the programmers.}
+
+ \transabstract[transABSTRACT]{The landscape of high performance parallel computing is currently dominated by distributed, hierarchical machines. Supercomputers and computer clusters now connect multicore processors with local memories through high-speed networks where both the former and the latter are themselves hierarchical in nature due to multi-level caches in NUMA-nodes and complex inter-connection topologies among server racks and cabinets. Careful data and computation placement, low-overhead shared-data synchronization within cores of a node, and optimized communication across nodes over the network are critical for good program performance in present-day machines. For HighP5 programming language, all these aspects are challenging compilation issues as HighP5 is a declarative programming language where programmers write a pseudocode-like parallel program where only intensions regarding these aspects are specified and their proper implementation is left for the compiler to determine. This article discusses how the HighP5 compiler solves the issues related to efficient memory-management, intra-node synchronization, and communication in hierarchical distributed machines and compares performance of HighP5 executables for some building block reference problems against optimized hand-written MPI codes. Although the design decisions and algorithmic elements discussed in this writing are part of the HighP5 compiler; they are generic enough to apply to any parallel programming language that works in distributed, hierarchical machines and wants to abstract away data synchronization and communication operations from the programmers.}
+
+\abbr{5-FU, 5-fluorouracil; CFD, computational fluid dynamics; CH, channel; EFS, event-free survival; GBM, glioblastoma multiforme; OS, overall survival; PFS, progression-free
+survival; SD, standard deviation.}
+
+%\contributed{Hao Zhang and Pengyue D. Guo contributed equally to this study.}
+
+%\dedicated{Dedicated to Srivivasa Ramanujano on the occasion of his 125th birth anniversary.}
+
+%\copyright{This is an open access article under the terms of the \href{Creative Commons Attribution-NonCommercial}{Creative Commons Attribution-NonCommercial} License, which permits use, distribution and reproduction in any medium, provided the
+%original~work~is~properly cited and is not used for commercial purposes.
+%\\[5pt]
+%  ©  2024 The Author(s) \textit{AIChE Journal} published by Wiley Periodicals LLC on behalf of American Institute of Chemical Engineers.}
+
+%\openaccessstatement
+
+\maketitle
+%\afterpage{\aftergroup\restoregeometry}
+
+%\onecolumn
+
+\section{Introduction}
+\label{sec:introduction}
+The abundance of distributed memory machines in high performance computing is evident from the TOP500 \citep{Dongarra2011} supercomputers list. For several decades running, all the machines in the list are distributed memory machines. In early days, these machines were pure distributed memory machines: connecting unicore CPUs via some high speed networks. However, now almost all supercomputers have multicore CPUs and GPUs interconnected through complex interconnection networks. For example, the first exascale machine Frontier \citep{10485138} has one 64-core AMD CPU and 4 integrated GPUs as building block nodes. Consequently, these machines can be called distributed shared-memory multicomputers where parts of the total aggregate distributed memory of the machines are shared among groups of processing units. The same characterization holds for compute clusters prevalent in campuses and organizations, as they comprise commodity machines armed with multicore CPUs and GPUs. This march of distributed shared-memory multicomputers -- henceforth, we will call them just distributed memory machines for simplicity -- should continue without some tectonic shift in the architecture of sillicon-based computers due to the inherent scalability problem with hardware cache-coherency protocol \citep{10.1145/158439.158907} for large purely shared-memory computers.
+
+The big question is how to utilize distributed memory machines in high performance computing effectively. Although the extent of exa-scale and peta-scale machines' may marvel an onlooker, actually the available computation power historically always lags behind application demand \citep{Snyder:1986:TAS:17814.17826}. The reason is that algorithms for most interesting problems are of quadratic or higher order, while improvement in computation capacity is linear; and larger capacities always drive application interest towards even larger input and higher precision \citep{10.1145/42411.42415}. Since performance is the supreme concern, making the best use of the capacities of underlying execution platform is essential. However, exploiting the capacities does not come from just a better parallel algorithms, it requires balancing communication with computation, optimizing data synchronization, and better distribution of computation and data \citep{Foster:1995:DBP:527029} -- all of which are platform dependent. Consequently, it is fair to say that high performance parallel computing is hard except for some simple cases. 
+
+The desire to eke out all features of a target execution platform led to the dominance of low-level primitives or language extensions, such as, MPI \citep{Walker96mpi:a}, Pthreads \citep{10.5555/263953}, and CUDA \citep{Nickolls:2008:SPP:1365490.1365500} in parallel computing for several decades. However, effective utilization of recent distributed memory machines require combining these primitives that are individually difficult. Furthermore, although the best performance is attainable using these primitives, the primitives themselves do not inherently promote good decision making about a program implementation; rather, programmers' ad hoc understanding of the machine architecture is the key. For example, it is shown that incorporating network topology-dependent reasoning significantly improves MPI program implementations' performance \citep{10.1145/2488551.2488564}. However, with the complexity of both interconnection network and node architecture on the rise, such ad hoc decision making has also become increasingly difficult.
+
+Due to this increasing difficulty of parallel programming in newer machines, the interest of high-level programming languages that abstract away some aspects of data distribution, synchronization, and communication has grown. The approaches in this regard widely varies, from {\textit{pragma} pre-processor parallization directives in OpenACC \citep{farber2016parallel} for accelerator-like platforms, multi-paradigm parallel library integrations in Julia \citep{lin2021comparing} for different architectures, detailed data distribution and computation placement facilities in KoKKOS \citep{trott2021kokkos}, or a simpler cleaner uniform partitioned shared-memory programming in PGAS languages \citep{Yelick:2007:PPU:1278177.1278183}. 
+	
+    
+HighP5 \citep{yanhaona2024highp5} is unique among the new language and library alternatives to low-level coding in the sense that it allows programmers to map computation and data to arbitrary partition levels of a hierarchical distributed memory machine. HighP5 is a declarative programming language where programmers express the flow of computations using a pseudocode-like description and specify a hierarchical data distribution that computations manipulate. They then explicitly `map' the computations and data to different levels of hierarchy of the target execution platform. The compiler does the necessary index transformation, synchronization insertion, and data communication that are needed for the correct behavior and good performance of the executable code. This breakdown of responsibilities enables efficient executable generation of the same source program for different target platforms using different mapping configurations.  
+	
+This article discusses the working principle of the HighP5 compiler for distributed memory platforms with a particular emphasis on data part representation, logic, and algorithms for automatic data synchronization and communication. Two critical concerns in this regard are to minimize the cost of decision making code that compiler inserts in-between users' application logic so that performance debugging is easy and to optimize the implementation of data synchronization and communication logic. The compiler generates MPI+Pthreads hybrid code where synchronization within a shared-memory region is achieved using Pthreads semaphores and barriers and various forms of MPI point-to-point and group communications are employed for syncing data among distributed memory parts. Careful attention is paid to the use of appropriate MPI collective communication primitives whenever possible to take the advantage of separate collective communication networks that are common on modern supercomputers \citep{10.1145/1088149.1088183} and HPC environments \citep{6490322}\citep{10.1145/329366.301116}. Furthermore, the compiler applies asynchronous communication and code reordering to maximize computation-communication overlap. 
+	
+The article also analyzes the performance of HighP5 executables for three building block problems from dense and sparse linear algebra, and finite-value method in comparison to optimized handwritten benchmark code implemented in plain MPI on the Fugaku supercomputer \citep{sato2021co}. The comparative analysis exposes some important implementation aspects of automatic synchronization and communication that greatly impact the performance at scale.
+	
+The contribution of this article is important mainly from two respects. First, the techniques and algorithms HighP5 distributed memory compiler uses are not specific to the language. Rather, it treats efficient data-parts representation and communication requirement calculation in a hierarchically partitioned distributed memory machine as generic problems whose solutions should be useful to current and future language compilers that target similar machine architectures. Second, although the literature on languages, platform improvements, and performance assessments is rich in parallel computing; there is a dearth of publications on compilers that this article amplifies.  
+	
+\section{Related Work}
+\label{sec:related-work}
+The extent of compilers' responsibilities in parallelizing high performance computing programs evolved with the evolution of the parallel hardware architectures. We can track early efforts on automatic extraction of fine-grained parallelism from functional languages programs in languages like SISAL \citep{osti_10192282}\citep{FEO1990349} and VAL \citep{10.1145/357153.357157}. Parallel hardware researchers at that time were focused on building data flow machines \citep{GURD198549}\citep{10.1145/27633.28055} that can utilize fine-grained parallelism effectively. However, with the lack of success with data-flow machine architectures, interest in fine-grained parallelism extraction also died.
+	
+Early successful supercomputers are shared-memory machines that connect a large number of independent processing units to a shared memory \citep{10.5555/1623264.1623335} \citep{10.1145/1480083.1480098} \citep{hord1982illiac}. Their success ushered great interest in shared-memory parallel programming, in particular, in parallelizing compilers \citep{10.1145/234313.234417}\citep{10.1145/193209.193217}. A parallelizing compiler takes a sequential code, does data flow analyses of the code to identify operations that can be done in parallel, then generates an equivalent parallel program by segregating parallel parts and inserting synchronization operations in appropriate places. However, the scalability problem with concurrent memory accesses from a large number of processors and the difficulty of implementing hardware cache coherence protocol in large machines led to the demise of shared memory machines in high performance computing.
+	
+The advent of early distributed memory machines practically bode farewell to parallelizing compilers ~\citep{10.1145/1238844.1238851}. The reason behind is the gross disparity between the cost of a communication and the cost of a computation, with former being hundred to thousand times higher than the latter. Foster's influential methodology of parallel programming \citep{Foster:1995:DBP:527029} is a good mechanism to formally explore the underlying problem. According to Foster, effecient parallel programming in a distributed memory machine requires: first, a parallel algorithm; second, determining communication among parallel parts; third, agglomerating the parts into larger units to reduce communications; and forth, mapping those units to the parallel processors of the target execution platform. Parallelizing compilers were good at the first two tasks. However, generic solution to agglomeration and mapping is a computationally hard problem, thus, unsolvable for compilers.  
+	
+A key takeaway from that era of high performance computing is that programmers should specify appropriate data distribution and implicitly/explicitly delineate the positions of the code where data synchronization among overlapping data parts located in different places of a distributed memory machine. The compilers should implement the communication and synchronization logic based on programmers' direction. Co-array FORTRAN \citep{10.1145/289918.289920}, HPF \citep{219857} \citep{MEHROTRA1998325}, C** \citep{10.1007/3-540-57502-2_56}, and NESL \citep{10.5555/865114} are examples of languages, among many others, built with this vision at that time. However, the programming model that eventually dominated is the Message Passing Standard (MPI) \citep{10.1007/978-3-0348-8534-8_21}, which is a realization of Hoare's Communicating Sequential Processes (CSP) \citep{10.1145/359576.359585}. MPI is a low-level library programming with C and FORTRAN bindings, where programmers control all aspects of computation and communication, and hardware engineers focus on efficient implementation of different MPI communication primitives. This role breakdown practically relieves the language compiler from all responsibilities related to parallelism. 
+	
+There are many arguments for MPI's predominance in high performance computing. Giving programmers the utmost control on all aspects of parallel programming undoubtedly promotes the best performance, which is the prime concern, and argued as the main contributor's to MPI's success. However, optimized MPI programs are difficult to write and equally difficult to debug. The key problem with the MPI programming is that there is no clean abstraction available to the programmers to reason about the capabilities of the execution platform. Consequently, ad-hoc optimizations are needed in the code to make the best use of the hardware. Furthermore, a plethora of explicit communication codes hide the algorithmic logic of the implementation.
+	
+MPI is still prominent in this era of exascale computing \citep{https://doi.org/10.1002/cpe.4851}. However, the advent of multicore processors and GPUs in the beginning of this millennium inspires a renewed interest in high-level parallel language alternatives to MPI programming. Supercomputers are built now a days using multicore CPUs and GPUs as nodes connected via one or more high-speed hierarchical interconnection networks. There are regions of memory that are shared among the cores of a node where shared-memory modes of programming, such as, Pthreads \citep{10.5555/263953}, and CUDA \citep{10.1145/1365490.1365500} are appropriate; while, message passing befitting for the distributed network connecting these regions. Consequently, there have been efforts on combining MPIs with shared-memory programming primitives \citep{YANG2011266} \citep{doi:10.2514/6.2010-522}\citep{10.1007/978-3-540-88436-1_36}. However, such efforts are quite complex and break the MPI model as processes are no longer sequential.     
+	
+In recent years, there have been renewed interest in high-level parallel programming languages as cleaner, productive, and efficient alternatives to low-level parallel programming. The DARPA funded languages such as Chapel \citep{doi:10.1177/1094342007078442}, X10 \citep{10.1145/1229428.1229483}, Titanium \citep{titanium}, and UPC \citep{10.1145/1188455.1188483} are prime examples of research and development in this direction. These languages uses a partitioned global address space (PGAS) abstraction \citep{Yelick:2007:PPU:1278177.1278183} of the distributed memory machine and allows programmers to specify data distributions in that space. Computations can access both local and remote data where the compiler inserts communication code for copying remote data to the memory of individual local processes based on explicit but typically indirect synchronization instructions. A growing number of supercomputers now include runtime support for these languages along with MPI \citep{10.1145/2020373.2020378} \citep{5161076}. With their performance becoming competitive with hybrid MPI code \citep{Chamberlain2018ChapelCO}, the interest in them should sustain. Infact, some researchers are investigating the possibility of using MPI and threading primitives for runtime engines development for these languages \citep{1613273}.
+	
+At the same time, there is concomitant realization that new languages and tools should allow utilization of the deep hierarchies at the node and network layers of present day distributed memory machines for best performance from the execution platforms. Hierarchical Tiled Arrays \citep{10.1145/1122971.1122981}, Sequoia \citep{10.1145/1188455.1188543}, Legion \citep{10.5555/2388996.2389086}, and HighP5 \citep{Yanhaona:2015:RTA:2723772.2723774} are examples of research in this direction. Compilers' responsibilities regarding data synchronization and communication in these languages are more stringent because of the demand for efficient localization of synchronization and communication primitives and due to the tendency of frequent communications at the lower level of the hierarchies in a hierarchical code.
+	
+HighP5 compilers are source-to-source compilers. Depending on the execution platform, HighP5 compilers generate low-level threading, MPI, and CUDA codes that are converted into binaries using appropriate downstream compilers. However, a key distinction with some other recent performance portability and multi-platform parallel programming languages such as Kokkos \citep{trott2021kokkos}, StarPU \citep{augonnet2009starpu}, and Julia \citep{lin2021comparing} is that the HighP5 compilers make all decisions regarding communication, synchronization, GPU offloading, CPU core to task assignments, etc. on their own. The downstream compilers only serves as binary generation tools. In contrast, Kokkos uses OpenMP \citep{gayatri2023kokkos} and OpenAcc \citep{valero2022kokkacc} for host-level and accelerator-based parallelization, which are themselves middleware libraries that apply sophisticated hardware related reasoning for efficient executable generation. Similarly, both StarPU and Julia \citep{teichgraber2022julia} use managed runtime and library-based parallelism for performance portability. In HighP5, language enhancement and compiler enrichment cannot be decoupled due to its unique hardware cognizant programming model. This compiler-coupled language development that adheres to the classic principle of supporting only one efficient way of expressing a particular thing in user programs \citep{wirth1974design} makes HighP5 compilers uniquely interesting.   
+	
+	
+
+
+Quisque ullamcorper placerat ipsum. Cras nibh \cite{Benson1992,Hirt1974}. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
+Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor
+vitae risus porta vehicula.
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. (Figures \ref{fig1} and \ref{fig2}) Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congues
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
+vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+\begin{figure*}[htb]
+\centerline{\includegraphics[width=\linewidth,height=9pc,draft]{empty}}
+\caption{This is the sample figure caption.\label{fig1}}
+\end{figure*}
+
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu
+ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum
+eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et
+convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non,
+pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio.
+\begin{align*}
+s(nT_{s}) &= s(t)\times \sum\limits_{n=0}^{N-1} \delta (t-nT_{s}) \xleftrightarrow{\mathrm{DFT}}  S \left(\frac{m}{NT_{s}}\right) \nonumber\\[3pt]
+&= \frac{1}{N} \sum\limits_{n=0}^{N-1} \sum\limits_{k=-N/2}^{N/2-1} s_{k} e^{\mathrm{j}2\pi k\Delta fnT_{s}} e^{-j\frac{2\pi}{N}mn}
+\end{align*}
+
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non
+odio. Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce
+sed justo eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor.
+Donec pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin
+et quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien
+turpis, fermentum vel, eleifend faucibus, vehicula eu, lacus.
+
+\begin{figure*}
+\centerline{\includegraphics[width=342pt,height=9pc,draft]{empty}}
+\caption{This is the sample figure caption.\label{fig2}}
+\end{figure*}
+
+\subsection{Second Level Head}
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit, dictum
+in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. Aliquam vestibulum
+fringilla lorem. Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla facilisi. Pellentesque
+eget lectus. Proin eu metus. Sed porttitor. In hac habitasse platea dictumst. Suspendisse eu lectus. Ut mi mi, lacinia
+sit amet, placerat et, mollis vitae, dui. Sed ante tellus, tristique ut, iaculis eu, malesuada ac, dui. Mauris nibh leo,
+facilisis non, adipiscing quis, ultrices a, dui.
+
+Morbi luctus, wisi viverra faucibus pretium, nibh est placerat odio, nec commodo wisi enim eget quam. Quisque
+libero justo, consectetuer a, feugiat vitae, porttitor eu, libero. Suspendisse sed mauris vitae elit sollicitudin malesuada.
+
+Maecenas ultricies eros sit amet ante. Ut venenatis velit. Maecenas sed mi eget dui varius euismod. Phasellus aliquet
+volutpat odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque sit
+amet pede ac sem eleifend consectetuer. Nullam elementum, urna vel imperdiet sodales, elit ipsum pharetra ligula,
+ac pretium ante justo a nulla. Curabitur tristique arcu eu metus. Vestibulum lectus. Proin mauris. Proin eu nunc eu
+urna hendrerit faucibus. Aliquam auctor, pede consequat laoreet varius, eros tellus scelerisque quam, pellentesque
+hendrerit ipsum dolor sed augue. Nulla nec lacus.
+
+\vspace{10pt}
+
+{\setlength\arrayrulewidth{5pt}
+\arrayrulecolor{gray}
+\begin{tabular}{|p{230pt}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id hendrerit nunc. Sed scelerisque lacus vitae erat eleifend eleifend. Donec eros mi, placerat in porta eleifend, placerat a urna. Pellentesque venenatis neque non turpis convallis vehicula. Aliquam aliquet ultricies tincidunt.
+\end{tabular}}
+
+\section{Example for Another First Level Head}\label{sec3}
+
+\subsection{Example for Another Second Level Head}
+
+Suspendisse vitae elit. Aliquam arcu neque, ornare in, ullamcorper quis, commodo eu, libero. Fusce sagittis erat at
+erat tristique mollis. Maecenas sapien libero, molestie et, lobortis in, sodales eget, dui. Morbi ultrices rutrum lorem.
+Nam elementum ullamcorper leo. Morbi dui. Aliquam sagittis. Nunc placerat. Pellentesque tristique sodales est.
+Maecenas imperdiet lacinia velit. Cras non urna. Morbi eros pede, suscipit ac, varius vel, egestas non, eros. Praesent
+malesuada, diam id pretium elementum, eros sem dictum tortor, vel consectetuer odio sem sed wisi.
+
+Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque
+augue sed urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id, sapien. Nullam at lectus. In sagittis
+ultrices mauris. Curabitur malesuada erat sit amet massa. Fusce blandit. Aliquam erat volutpat. Aliquam euismod.
+Aenean vel lectus. Nunc imperdiet justo nec dolor.
+
+\subsection{Second Level Head}
+
+Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
+eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
+facilisis magna. Mauris quis magna varius nulla scelerisque imperdiet. Aliquam non quam. Aliquam porttitor quam
+a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
+convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+
+
+\subsubsection{Third Level Head}
+
+Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra tortor. Sed fringilla
+justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue est scelerisque
+sapien, venenatis congue nulla arcu et pede. Ut suscipit enim vel sapien. Donec congue. Maecenas urna mi, suscipit
+in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl.
+
+\paragraph{Fourth Level Head}
+
+Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque
+augue sed urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id, sapien. Nullam at lectus. In sagittis
+ultrices mauris. Curabitur malesuada erat sit amet massa. Fusce blandit. Aliquam erat volutpat. Aliquam euismod.
+Aenean vel lectus. Nunc imperdiet justo nec dolor.
+
+Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
+eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
+facilisis magna. Mauris quis magna varius nulla scelerisque imperdiet. Aliquam non quam. Aliquam porttitor quam
+a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum.  In vitae pede quis diam bibendum placerat. Fusce elementum In vitae pede quis diam bibendum placerat. Fusce elementum
+convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+
+\subparagraph{Fifth Level Head}
+
+Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra
+tortor. Sed fringilla justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue
+est scelerisque sapien, venenatis congue nulla arcu et pede. Ut suscipit enim vel sapien. Donec congue. Maecenas
+urna mi, suscipit in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl.
+
+Etiam ac leo a risus tristique nonummy. Donec dignissim tincidunt nulla. Vestibulum rhoncus molestie odio. Sed
+lobortis, justo et pretium lobortis, mauris turpis condimentum augue, nec ultricies nibh arcu pretium enim. Nunc
+purus neque, placerat id, imperdiet sed, pellentesque nec, nisl. Vestibulum imperdiet neque non sem accumsan laoreet.
+In hac habitasse platea dictumst. Etiam condimentum facilisis libero. Suspendisse in elit quis nisl aliquam dapibus.
+Pellentesque auctor sapien. Sed egestas sapien nec lectus. Pellentesque vel dui vel neque bibendum viverra. Aliquam
+porttitor nisl nec pede. Proin mattis libero vel turpis. Donec rutrum mauris et libero. Proin euismod porta felis.
+Nam lobortis, metus quis elementum commodo, nunc lectus elementum mauris, eget vulputate ligula tellus eu neque.
+Vivamus eu dolor.
+
+Nulla in ipsum. Praesent eros nulla, congue vitae, euismod ut, commodo a, wisi. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy magna non leo. Sed felis erat,
+ullamcorper in, dictum non, ultricies ut, lectus. Proin vel arcu a odio lobortis euismod. Vestibulum ante ipsum primis
+in faucibus orci luctus et ultrices posuere cubilia Curae; Proin ut est. Aliquam odio. Pellentesque massa turpis, cursus
+eu, euismod nec, tempor congue, nulla. Duis viverra gravida mauris. Cras tincidunt. Curabitur eros ligula, varius ut,
+pulvinar in, cursus faucibus, augue (Box~1).
+
+
+Etiam ac leo a risus tristique nonummy. Donec dignissim tincidunt nulla. Vestibulum rhoncus molestie odio. Sed
+lobortis, justo et pretium lobortis, mauris turpis condimentum augue, nec ultricies nibh arcu pretium enim. Nunc
+purus neque, placerat id, imperdiet sed, pellentesque nec, nisl. Vestibulum imperdiet neque non sem accumsan laoreet.
+In hac habitasse platea dictumst. Etiam condimentum facilisis libero. Suspendisse in elit quis nisl aliquam dapibus.
+Pellentesque auctor sapien. Sed egestas sapien nec lectus. Pellentesque vel dui vel neque bibendum viverra. Aliquam
+porttitor nisl nec pede. Proin mattis libero vel turpis. Donec rutrum mauris et libero. Proin euismod porta felis.
+Nam lobortis, metus quis elementum commodo, nunc lectus elementum mauris, eget vulputate ligula tellus eu neque.
+Vivamus eu dolor.
+
+
+
+Curabitur tellus magna, porttitor a, commodo a, commodo in, tortor. Donec interdum (Table~\ref{tab1}).  Praesent scelerisque. Maecenas posuere sodales odio. Vivamus metus lacus, varius quis, imperdiet quis, rhoncus a, turpis. Etiam ligula arcu,
+elementum a, venenatis quis, sollicitudin sed, metus. Donec nunc pede, tincidunt in, venenatis vitae, faucibus vel,
+nibh. Pellentesque wisi. Nullam malesuada. Morbi ut tellus ut pede tincidunt porta. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Etiam congue neque id dolor. In vitae pede quis diam bibendum placerat. Fusce elementum In vitae pede quis diam bibendum placerat.
+
+\begin{boxwithhead}
+{BOX 1\quad|\quad{\normalfont This is sample for Box head and text.}}
+{\noindent This is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext. This is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext.}
+\end{boxwithhead}
+
+
+\begin{center}
+\begin{table*}[!ht]%
+\caption{This is sample table caption.\label{tab1}}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccc@{\extracolsep\fill}}
+\toprule
+&\multicolumn{2}{@{}c}{\textbf{Spanned heading$^{\tnote{\bf a}}$}} & \multicolumn{2}{@{}c}{\textbf{Spanned heading$^{\tnote{\bf b}}$}} \\\cmidrule{2-3}\cmidrule{4-5}
+\textbf{Col1 head} & \textbf{Col2 head}  & \textbf{Col3 head}  & {\textbf{Col4 head}}  & \textbf{Col5 head}   \\
+\midrule
+col1 text & col2 text  & col3 text  & 12.34  & col5 text\tnote{1}   \\
+col1 text & col2 text  & col3 text  & \hphantom{0}1.62  & col5 text\tnote{2}   \\
+col1 text & col2 text  & col3 text  & 51.809  & col5 text   \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}%%[341pt]
+\item[$^{\rm a}$] Example for a first table footnote.
+\item[$^{\rm b}$] Example for a second table footnote.
+\item {\it Source:} Example for table source text.
+\end{tablenotes}
+\end{table*}
+\end{center}
+
+
+Donec et nisl at wisi luctus bibendum. Nam interdum tellus ac libero. Sed sem justo, laoreet vitae, fringilla at,
+adipiscing ut, nibh. Maecenas non sem quis tortor eleifend fermentum. Etiam id tortor ac mauris porta vulputate.
+Integer porta neque vitae massa. Maecenas tempus libero a libero posuere dictum. Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Aenean quis mauris sed elit commodo placerat. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus rhoncus tincidunt libero.
+Etiam elementum pretium justo. Vivamus est. Morbi a tellus eget pede tristique commodo. Nulla nisl. Vestibulum
+sed nisl eu sapien cursus rutrum. In vitae pede quis diam bibendum placerat. Fusce elementum In vitae pede quis diam bibendum placerat.
+
+\begin{boxtext}%
+{\noindent This is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext this is sample for boxtext.}
+\end{boxtext}
+
+Nulla non mauris vitae wisi posuere convallis. Sed eu nulla nec eros scelerisque pharetra. Nullam varius. Etiam
+dignissim elementum metus. Vestibulum faucibus, metus sit amet mattis rhoncus, sapien dui laoreet odio, nec ultricies
+nibh augue a enim. Fusce in ligula. Quisque at magna et nulla commodo consequat. Proin accumsan imperdiet sem.
+Nunc porta. Donec feugiat mi at justo. Phasellus facilisis ipsum quis ante. In ac elit eget ipsum pharetra faucibus.
+Maecenas viverra nulla in massa (Table~\ref{tab2}).
+
+Nulla in ipsum. Praesent eros nulla, congue vitae, euismod ut, commodo a, wisi. Pellentesque habitant morbi
+tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy magna non leo. Sed felis erat,
+ullamcorper in, dictum non, ultricies ut, lectus. Proin vel arcu a odio lobortis euismod. Vestibulum ante ipsum primis
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
+facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
+vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+\begin{table*}[!t]%
+\centering %
+\caption{This is sample table caption.\label{tab2}}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccc@{\extracolsep\fill}}
+\toprule
+\textbf{Col1 head} & \textbf{Col2 head}  & \textbf{Col3 head}  & \textbf{Col4 head}  & \textbf{Col5 head} \\
+\midrule
+col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$^\dagger$}   \\
+col1 text & col2 text  & col3 text  & col4 text  & col5 text   \\
+col1 text & col2 text  & col3 text  & col4 text  & col5 text\tnote{$^\ddagger$}   \\
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}
+\item[$^\dagger$] Example for a first table footnote.
+\item[$^\ddagger$] Example for a second table footnote.
+\item {\it Source:} Example for table source text.
+\end{tablenotes}
+\end{table*}
+
+Below is the example \cite{Caramana1998,Mavriplis2003,Hoch2009} for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list. Below is the example for bulleted list:
+\begin{itemize}
+\item bulleted list entry sample bulleted list entry \cite{Scovazzi2008}, sample list entry text.
+\item bulleted list entry sample bulleted list entry. bulleted list entry sample bulleted list entry. bulleted list entry sample bulleted list entry.
+\item bulleted list entry sample bulleted list entry \cite{Shashkov1996}, bulleted list entry sample bulleted list entry \cite{Knupp1999}, sample list entry text.  bulleted list entry sample bulleted list entry.
+\item sample list entry text. sample list entry text.
+\end{itemize}
+
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu
+ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum
+eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et
+convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non,
+pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio.
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non
+odio. Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce
+sed justo eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin
+et quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien
+turpis, fermentum vel, eleifend faucibus, vehicula eu, lacus.
+
+Pellentesque non elit. Fusce
+sed justo eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin
+et quam. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the sample for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list. Below is the example for description list:\medskip
+
+\textbf{Description sample:}
+\begin{description}
+\item[first entry] description text, description text \cite{Knupp1999,Taylor1937}. description text, description text, description text, description text, description text.
+\item[second long entry] description text, description text, description text, description text, description text, description text, description text.
+\item[third entry] description text, description text, description text, description text, description text.
+\item[fourth entry] description text, description text.
+\end{description}\medskip
+
+\textbf{Numbered list items sample:}
+\begin{enumerate}
+\item First level numbered list entry, sample numbered list entry.
+
+\item First numbered list entry, sample numbered list entry. Numbered list entry \cite{Taylor1937}, sample numbered list entry. Numbered list entry, sample numbered list entry.
+
+\begin{enumerate}[a.]
+\item Second level alpabetical list entry. Second level alpabetical list entry. Second level alpabetical list entry \cite{Hoch2009}. Second level alpabetical list entry.
+
+\item Second level alpabetical list entry. Second level alpabetical list entry \cite{Hirt1974,Benson1992}.
+
+\begin{enumerate}[i.]
+\item Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry.
+
+\item Third level lowercase roman numeral list entry. Third level lowercase roman numeral list entry. \cite{Benson1992}
+\end{enumerate}
+
+\item Second level alpabetical list entry. Second level alpabetical list entry \cite{Dukowicz1984}.
+\end{enumerate}
+
+\item First level numbered list entry, sample numbered list entry. Numbered list entry, sample numbered list entry. Numbered list entry.
+
+\item Another first level numbered list entry, sample numbered list entry. Numbered list entry, sample numbered list entry. Numbered list entry.
+\end{enumerate}
+
+
+\section{Examples for Enunciations}\label{sec4}
+
+\begin{theorem}\label{thm1}
+Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text.
+\end{theorem}
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
+Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor
+vitae risus porta vehicula.
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
+facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
+vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+\begin{proposition}
+Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text.
+\end{proposition}
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
+Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor
+vitae risus porta vehicula.
+
+\begin{definition}
+Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text.
+\end{definition}
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non
+odio. Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce
+sed justo eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor.
+Donec pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin
+et quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien
+turpis, fermentum vel, eleifend faucibus, vehicula eu, lacus.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
+dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. Aliquam
+vestibulum fringilla lorem. Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla facilisi.
+Pellentesque eget lectus. Proin eu metus. Sed porttitor. In hac habitasse platea dictumst. Suspendisse eu lectus. Ut
+mi mi, lacinia sit amet, placerat et, mollis vitae, dui. Sed ante tellus, tristique ut, iaculis eu, malesuada ac, dui.
+Mauris nibh leo, facilisis non, adipiscing quis, ultrices a, dui.
+
+\begin{proof}
+Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text.
+\end{proof}
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
+a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
+urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+
+\begin{proof}[Proof of Theorem~{\rm\ref{thm1}}]
+Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text.
+\end{proof}
+
+
+
+Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
+eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
+facilisis magna. Mauris quis magna varius nulla scelerisque imperdiet. Aliquam non quam. Aliquam porttitor quam
+a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
+convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra tortor. Sed fringilla
+justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue est scelerisque
+sapien, venenatis congue nulla arcu et pede. Ut suscipit enim vel sapien. Donec congue. Maecenas urna mi, suscipit
+in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl (Table~\ref{tab4}).
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
+dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. Aliquam
+vestibulum fringilla lorem. Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla facilisi (Figure~\ref{fig1}).
+Pellentesque eget lectus. Proin eu metus. Sed porttitor. In hac habitasse platea dictumst. Suspendisse eu lectus. Ut Curabitur tellus magna, porttitor a, commodo a, commodo in, tortor. Donec interdum. Praesent scelerisque. Mae-
+cenas posuere sodales odio. Vivamus metus lacus, varius quis, imperdiet quis, rhoncus a, turpis. Etiam ligula arcu,
+elementum a, venenatis quis, sollicitudin sed, metus. Donec nunc pede, tincidunt in, venenatis vitae, faucibus vel.
+
+
+
+Pellentesque wisi. \cite{Kucharik2012} Nullam malesuada. Morbi ut tellus ut pede tincidunt porta. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Etiam congue neque id dolor.
+
+
+\begin{algorithm}
+\caption{\enskip Pseudocode for our algorithm}\label{alg1}
+\begin{algorithmic}
+  \For each frame
+  \For water particles $f_{i}$
+  \State compute fluid flow \cite{Hirt1974}
+  \State compute fluid--solid interaction \cite{Benson1992}
+  \State apply adhesion and surface tension \cite{Margolin2003}
+  \EndFor
+   \For solid particles $s_{i}$
+   \For neighboring water particles $f_{j}$
+   \State compute virtual water film \\(see Section~\ref{sec3})
+   \EndFor
+   \EndFor
+   \For solid particles $s_{i}$
+   \For neighboring water particles $f_{j}$
+   \State compute growth direction vector \\(see Section~\ref{sec2})
+   \EndFor
+   \EndFor
+   \For solid particles $s_{i}$
+   \For neighboring water particles $f_{j}$
+   \State compute $F_{\theta}$ (see Section~\ref{sec1})
+   \State compute $CE(s_{i},f_{j})$ \\(see Section~\ref{sec3})
+   \If $CE(b_{i}, f_{j})$ $>$ glaze threshold
+   \State $j$th water particle's phase $\Leftarrow$ ICE
+   \EndIf
+   \If $CE(c_{i}, f_{j})$ $>$ icicle threshold
+   \State $j$th water particle's phase $\Leftarrow$ ICE
+   \EndIf
+   \EndFor
+   \EndFor
+  \EndFor
+\end{algorithmic}
+\end{algorithm}
+
+Donec et nisl at wisi luctus bibendum. Nam interdum tellus ac libero. Sed sem justo, laoreet vitae, fringilla at,
+adipiscing ut, nibh. Maecenas non sem quis tortor eleifend fermentum. Etiam id tortor ac mauris porta vulputate.
+Integer porta neque vitae massa \cite{Hirt1974,Benson1992}.  Maecenas tempus libero a libero posuere dictum. Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Aenean quis mauris sed elit commodo placerat. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus rhoncus tincidunt libero.
+Etiam elementum pretium justo. Vivamus est. Morbi a tellus eget pede tristique commodo \cite{Benson1992}. Nulla nisl. Vestibulum
+sed nisl eu sapien cursus rutrum.
+
+Pellentesque wisi. Nullam malesuada. Morbi ut tellus ut pede tincidunt porta. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Etiam congue neque id dolor.
+
+Donec et nisl at wisi luctus bibendum. Nam interdum tellus ac libero. Sed sem justo, laoreet vitae, fringilla at,
+adipiscing ut, nibh. Integer porta neque vitae massa. Maecenas tempus libero a libero posuere dictum. Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Aenean quis mauris sed elit commodo placerat.
+Maecenas non sem quis tortor eleifend fermentum. Etiam id tortor ac mauris porta vulputate.
+Integer porta neque vitae massa. Maecenas tempus libero a libero posuere dictum. Vestibulum ante ipsum primis in
+faucibus orci luctus et ultrices posuere cubilia Curae; Aenean quis mauris sed elit commodo placerat. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Vivamus rhoncus tincidunt libero.
+Etiam elementum pretium justo. Vivamus est. Morbi a tellus eget pede tristique commodo. Nulla nisl. Vestibulum
+sed nisl eu sapien cursus rutrum.
+\begin{align}\label{eq23}
+\begin{split}
+ \|\tilde{X}(k)\|^2
+ &=\frac{\left\|\sum\limits_{i=1}^{p}\tilde{Y}_i(k)+\sum\limits_{j=1}^{q}\tilde{Z}_j(k) \right\|^2}{(p+q)^2} \\
+& \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.
+\end{split}
+\end{align}
+
+Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut pellentesque
+augue sed urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id, sapien. Nullam at lectus. In sagittis
+ultrices mauris. Curabitur malesuada erat sit amet massa. Fusce blandit. Aliquam erat volutpat. Aliquam euismod.
+Aenean vel lectus. Nunc imperdiet justo nec dolor.
+
+Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi erat, cursus id, nonummy sed, ullamcorper
+eget, sapien. Praesent pretium, magna in eleifend egestas, pede pede pretium lorem, quis consectetuer tortor sapien
+facilisis magna. Mauris quis magna varius nulla scelerisque imperdiet. Aliquam non quam. Aliquam porttitor quam
+a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
+convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+\begin{align}\label{eq24}
+\begin{split}
+ \|\tilde{X}(k)\|^2
+ &=\frac{\left\|\sum\limits_{i=1}^{p}\tilde{Y}_i(k)+\sum\limits_{j=1}^{q}\tilde{Z}_j(k) \right\|^2}{(p+q)^2} \\
+& \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.
+\end{split}
+\end{align}
+
+Aliquam lectus. Vivamus leo. Quisque ornare tellus ullamcorper nulla. Mauris porttitor pharetra
+tortor. Sed fringilla justo sed mauris. Mauris tellus. Sed non leo. Nullam elementum, magna in cursus sodales, augue
+est scelerisque sapien, venenatis congue nulla arcu et pede. Ut suscipit enim vel sapien. Donec congue. Maecenas
+urna mi, suscipit in, placerat ut, vestibulum ut, massa. Fusce ultrices nulla et nisl.
+
+Etiam ac leo a risus tristique nonummy. Donec dignissim tincidunt nulla. Vestibulum rhoncus molestie odio. Sed
+lobortis, justo et pretium lobortis, mauris turpis condimentum augue, nec ultricies nibh arcu pretium enim. Nunc
+purus neque, placerat id, imperdiet sed, pellentesque nec, nisl. Vestibulum imperdiet neque non sem accumsan laoreet.
+In hac habitasse platea dictumst. Etiam condimentum facilisis libero. Suspendisse in elit quis nisl aliquam dapibus.
+Pellentesque auctor sapien. Sed egestas sapien nec lectus. Pellentesque vel dui vel neque bibendum viverra. Aliquam
+porttitor nisl nec pede. Proin mattis libero vel turpis. Donec rutrum mauris et libero. Proin euismod porta felis.
+Nam lobortis, metus quis elementum commodo, nunc lectus elementum mauris, eget vulputate ligula tellus eu neque.
+Vivamus eu dolor.
+
+
+
+
+\section{Conclusions}\label{sec5}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
+vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus
+sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel
+leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur
+auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
+Duis eget orci sit amet orci dignissim rutrum.
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
+a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
+urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+
+%\backmatter
+\bmsubsection*{Author Contributions}
+
+This is an author contribution text. This is an author contribution text. This is an author contribution text. This is an author contribution text. This is an author contribution text.
+
+\bmsubsection*{Acknowledgments}
+This is acknowledgment text. \cite{Kenamond2013} Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here. This is acknowledgment text. Provide text here.
+
+\bmsubsection*{Financial Disclosure}
+
+None reported.
+
+\bmsubsection*{Conflicts of Interest}
+
+The authors declare no conflicts of interest.
+
+\bmsubsection*{Supporting Information}
+
+Additional supporting information can be found online in the Supporting Information
+section.
+
+\bibliographystyle{wileyNJD-Chicago}
+\bibliography{refs}
+
+
+\appendix
+
+\bmsection{Program Codes Appear in Appendix\label{app1}}
+\vspace*{12pt}
+Using the package {\tt listings} you can add non-formatted text as you would do with \verb|\begin{verbatim}| but its main aim is to include the source code of any programming language within your document.\newline Use \verb|\begin{lstlisting}...\end{lstlisting}| for program codes without mathematics.
+
+The {\tt listings} package supports all the most common languages and it is highly customizable. If you just want to write code within your document, the package provides the {\tt lstlisting} environment; the output will be in Computer Modern typewriter font. Refer to the below example:
+
+
+\begin{lstlisting}[caption={Descriptive caption text},label=DescriptiveLabel, basicstyle=\fontsize{8}{10}\selectfont\ttfamily]
+for i:=maxint to 0 do
+begin
+{ do nothing }
+end;
+Write('Case insensitive ');
+WritE('Pascal keywords.');
+\end{lstlisting}
+
+
+
+\bmsubsection{Subsection Title of First Appendix\label{app1.1a}}
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
+a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
+urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+
+\bmsubsubsection{Subsection Title of First Appendix\label{app1.1.1a}}
+
+\noindent\textbf{Unnumbered figure}
+
+
+\begin{center}
+\includegraphics[width=7pc,height=8pc,draft]{empty}
+\end{center}
+
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
+facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
+vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
+
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu
+ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum
+eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et
+convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non,
+pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio.
+
+\bmsection{Section Title of Second Appendix\label{app2}}%
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
+facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, et
+vehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla (Figure~\ref{fig5}).
+
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit amet, laoreet vitae, arcu. Aenean faucibus pede eu
+ante. Praesent enim elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros, malesuada sit amet, fermentum
+eu, sodales cursus, magna. Donec eu purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas dui, et
+convallis elit erat sed nulla. Donec luctus. Curabitur et nunc. Aliquam dolor odio, commodo pretium, ultricies non,
+pharetra in, velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel, odio.
+
+%== Figure 4 ==
+%% Example for figure inside appendix
+\begin{figure}[b]
+\centerline{\includegraphics[height=10pc,width=78mm,draft]{empty}}
+\caption{This is an example for appendix figure.\label{fig5}}
+\end{figure}
+
+\bmsubsection{Subsection Title of Second Appendix\label{app2.1a}}
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio. Sed vehicula hendrerit sem. Duis non odio.
+Morbi ut dui. Sed accumsan risus eget odio. In hac habitasse platea dictumst. Pellentesque non elit. Fusce sed justo
+eu urna porta tincidunt. Mauris felis odio, sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec
+pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis congue purus metus ultricies tellus. Proin et quam.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent sapien turpis,
+fermentum vel, eleifend faucibus, vehicula eu, lacus.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
+dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. Aliquam
+vestibulum fringilla lorem. Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla facilisi.
+Pellentesque eget lectus. Proin eu metus. Sed porttitor. In hac habitasse platea dictumst. Suspendisse eu lectus. Ut
+mi mi, lacinia sit amet, placerat et, mollis vitae, dui. Sed ante tellus, tristique ut, iaculis eu, malesuada ac, dui.
+Mauris nibh leo, facilisis non, adipiscing quis, ultrices a, dui.
+
+\bmsubsubsection{Subsection Title of Second Appendix\label{app2.1.1a}}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec
+vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus
+sit amet tortor gravida placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget sem vel
+leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar at, mollis ac, nulla. Curabitur
+auctor semper nulla. Donec varius orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
+Duis eget orci sit amet orci dignissim rutrum (Table~\ref{tab4}).
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
+a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
+urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+\begin{table*}[t]%
+\centering
+\caption{This is an example of Appendix table showing food requirements of army, navy and airforce.\label{tab4}}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llllll@{\extracolsep\fill}}%
+\toprule
+\textbf{Col1 head} & \textbf{Col2 head} & \textbf{Col3 head} & \textbf{Col4 head} & \textbf{Col5 head} & \textbf{Col6 head} \\
+\midrule
+col1 text & col2 text & col3 text & col4 text & col5 text & col6 text\\
+col1 text & col2 text & col3 text & col4 text & col5 text & col6 text\\
+col1 text & col2 text & col3 text& col4 text & col5 text & col6 text\\
+\bottomrule
+\end{tabular*}
+\end{table*}
+
+
+Example for an equation inside appendix
+\begin{equation}
+{\mathcal{L}} = i \bar{\psi} \gamma^\mu D_\mu \psi - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi\label{eq25}
+\end{equation}
+
+\bmsection{Example of Another Appendix Section\label{app3}}%
+\vspace*{12pt}
+This is sample for paragraph text this is sample for paragraph text  this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text this is sample for paragraph text
+
+
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero,
+pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna,
+vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque
+a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt
+urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+\begin{equation}
+\mathcal{L} = i \bar{\psi} \gamma^\mu D_\mu \psi
+    - \frac{1}{4} F_{\mu\nu}^a F^{a\mu\nu} - m \bar{\psi} \psi
+\label{eq26}
+\end{equation}
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus
+viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec
+bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum
+pellentesque felis eu massa.
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
+Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor
+vitae risus porta vehicula.
+
+
+\begin{center}
+\begin{tabular*}{240pt}{@{\extracolsep\fill}lcc@{\extracolsep\fill}}%
+\toprule
+\textbf{Col1 head} & \textbf{Col2 head} & \textbf{Col3 head} \\
+\midrule
+col1 text & col2 text & col3 text \\
+col1 text & col2 text & col3 text \\
+col1 text & col2 text & col3 text \\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae lacus tincidunt ultrices. Lorem ipsum dolor sit
+amet, consectetuer adipiscing elit. In hac habitasse platea dictumst. Integer tempus convallis augue. Etiam facilisis.
+Nunc elementum fermentum wisi. Aenean placerat. Ut imperdiet, enim sed gravida sollicitudin, felis odio placerat
+quam, ac pulvinar elit purus eget enim. Nunc vitae tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor
+vitae risus porta vehicula.
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a faucibus semper, leo velit ultricies tellus, ac
+venenatis arcu wisi vel nisl. Vestibulum diam. Aliquam pellentesque, augue quis sagittis posuere, turpis lacus congue
+quam, in hendrerit risus eros eget felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum porttitor. Nulla
+facilisi. Sed a turpis eu lacus commodo facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus sagittis dui, evehicula libero dui cursus dui. Mauris tempor ligula sed lacus. Duis cursus enim ut augue. Cras ac magna. Cras nulla.
+Nulla egestas. Curabitur a leo. Quisque egestas wisi eget nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec odio elit,
+dictum in, hendrerit sit amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer vitae justo. Aliquam
+vestibulum fringilla lorem. Sed neque lectus, consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla facilisi.
+Pellentesque eget lectus. Proin eu metus. Sed porttitor. In hac habitasse platea dictumst. Suspendisse eu lectus. Ut
+mi mi, lacinia sit amet, placerat et, mollis vitae, dui. Sed ante tellus, tristique ut, iaculis eu, malesuada ac, dui.
+Mauris nibh leo, facilisis non, adipiscing quis, ultrices a, dui.
+
+\nocite{*}% Show all bib entries - both cited and uncited; comment this line to view only cited bib entries;
+
+
+
+
+\end{document}

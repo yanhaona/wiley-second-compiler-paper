@@ -1,0 +1,7 @@
+\begin{mappingListing}{mapping-monteCarlo}
+``Monte Carlo Estimation" {
+    Space A: blade Level
+    Space B: NUMA Level
+    Space C: CPU Core Level	
+}
+\end{mappingListing}
