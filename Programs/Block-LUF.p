@@ -1,4 +1,4 @@
-\begin{codeExampleListing}{highp5-luf}{The parallel computation flow and partitioning section for data distribution of HighP5 program solving block-LU factorization.}
+\begin{codeExampleListing}{highp5-luf}{The parallel computation flow and partitioning section for data distribution of HighP5 block-LU factorization program.}
 Computation:
    Space A {
      Space B { prepareLU(a, u, l) }

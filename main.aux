@@ -106,106 +106,100 @@
 \newlabel{fig:seq-mmm-comparison}{{1}{4}{Execution time comparison among three sequential implementations of classic matrix-matrix multiplication program for small square input matrices. Here, Implementation 1 is unblocked, Implementation 2 processes matrices in sequence of 256 \texttimes 256 blocks, and Implementation 3 processes them in sequence of 64 \texttimes 64 blocks.\relax }{figure.caption.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }}{5}{figure.caption.2}\protected@file@percent }
 \newlabel{fig:frontier}{{2}{5}{An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }{figure.caption.2}{}}
-\citation{kamil2013hierarchical}
-\citation{yanhaona2024highp5}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Basic LU Factorization algorithm\relax }}{6}{algorithm.1}\protected@file@percent }
 \newlabel{algo:LUF}{{1}{6}{Basic LU Factorization algorithm\relax }{algorithm.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An illustration of the progression of Block LU decomposition strategy.\relax }}{6}{figure.caption.3}\protected@file@percent }
 \newlabel{fig:luf-scheme}{{3}{6}{An illustration of the progression of Block LU decomposition strategy.\relax }{figure.caption.3}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Block-LU Factorization algorithm\relax }}{6}{algorithm.2}\protected@file@percent }
 \newlabel{algo:Block-LUF}{{2}{6}{Block-LU Factorization algorithm\relax }{algorithm.2}{}}
-\citation{Snyder:1986:TAS:17814.17826}
-\citation{yanAndrewPCubeS}
-\citation{Rajaraman2023}
-\newlabel{highp5-luf}{{1}{7}{The parallel computation flow and partitioning section for data distribution of HighP5 program solving block-LU factorization}{lstlisting.0.0.1}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}The parallel computation flow and partitioning section for data distribution of HighP5 program solving block-LU factorization.}{7}{lstlisting.0.0.1}\protected@file@percent }
+\citation{kamil2013hierarchical}
+\citation{yanhaona2024highp5}
+\newlabel{highp5-luf}{{1}{7}{The parallel computation flow and partitioning section for data distribution of HighP5 block-LU factorization program}{lstlisting.0.0.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}The parallel computation flow and partitioning section for data distribution of HighP5 block-LU factorization program.}{7}{lstlisting.0.0.1}\protected@file@percent }
 \newlabel{mapping-luf-1}{{2}{7}{Single node mapping of block-LU factorization}{lstlisting.0.0.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Single node mapping of block-LU factorization}{7}{lstlisting.0.0.2}\protected@file@percent }
 \newlabel{mapping-luf-2}{{3}{7}{Multi-node mapping of block-LU factorization}{lstlisting.0.0.3}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Multi-node mapping of block-LU factorization}{7}{lstlisting.0.0.3}\protected@file@percent }
-\citation{Snyder:1986:TAS:17814.17826}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }}{8}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:frontier}{{4}{8}{An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The Nature of a HighP5 Executable}{8}{subsection.3.2}\protected@file@percent }
 \newlabel{subsec:behave-exe}{{3.2}{8}{The Nature of a HighP5 Executable}{subsection.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The runtime process model of HighP5 executables. \relax }}{10}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:runtime}{{5}{10}{The runtime process model of HighP5 executables. \relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The architecture of a composite PPU controller thread.\relax }}{10}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:ppu-controller}{{6}{10}{The architecture of a composite PPU controller thread.\relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Overview of the Compiler}{10}{section.4}\protected@file@percent }
-\newlabel{sec:compiler-overview}{{4}{10}{Overview of the Compiler}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Front-end/Back-end breakdown of the compiler.\relax }}{10}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:compilation-breakdwon}{{7}{10}{Front-end/Back-end breakdown of the compiler.\relax }{figure.caption.7}{}}
-\newlabel{highp5-luf-stages}{{4}{11}{Define and a part of Stages sections of the block-LU factorization task}{lstlisting.0.0.4}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Define and a part of Stages sections of the block-LU factorization task.}{11}{lstlisting.0.0.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The runtime process model of HighP5 executables. \relax }}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:runtime}{{4}{9}{The runtime process model of HighP5 executables. \relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The architecture of a composite PPU controller thread.\relax }}{9}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:ppu-controller}{{5}{9}{The architecture of a composite PPU controller thread.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Overview of the Compiler}{9}{section.4}\protected@file@percent }
+\newlabel{sec:compiler-overview}{{4}{9}{Overview of the Compiler}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Front-end/Back-end breakdown of the compiler.\relax }}{10}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:compilation-breakdwon}{{6}{10}{Front-end/Back-end breakdown of the compiler.\relax }{figure.caption.6}{}}
+\newlabel{highp5-luf-stages}{{4}{10}{Define and a part of Stages sections of the block-LU factorization task}{lstlisting.0.0.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Define and a part of Stages sections of the block-LU factorization task.}{10}{lstlisting.0.0.4}\protected@file@percent }
+\citation{10.1007/BFb0038655}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Task Data Management}{11}{section.5}\protected@file@percent }
 \newlabel{sec:task-data-mgmt}{{5}{11}{Task Data Management}{section.5}{}}
-\citation{10.1007/BFb0038655}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Handling Hierarchical Data Distributions}{12}{subsection.5.1}\protected@file@percent }
-\newlabel{subsec:data-distro}{{5.1}{12}{Handling Hierarchical Data Distributions}{subsection.5.1}{}}
-\newlabel{eq:single-dim-part}{{1}{12}{Handling Hierarchical Data Distributions}{equation.5.1}{}}
-\newlabel{eq:array-dims-part}{{2}{12}{Handling Hierarchical Data Distributions}{equation.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Handling Hierarchical Data Distributions}{11}{subsection.5.1}\protected@file@percent }
+\newlabel{subsec:data-distro}{{5.1}{11}{Handling Hierarchical Data Distributions}{subsection.5.1}{}}
+\newlabel{eq:single-dim-part}{{1}{11}{Handling Hierarchical Data Distributions}{equation.5.1}{}}
+\newlabel{eq:array-dims-part}{{2}{11}{Handling Hierarchical Data Distributions}{equation.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }}{12}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:partition-function}{{7}{12}{An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Memory Allocation in MPI Processes}{12}{subsection.5.2}\protected@file@percent }
 \newlabel{sub-sec:array-aloc}{{5.2}{12}{Memory Allocation in MPI Processes}{subsection.5.2}{}}
 \newlabel{eq:1d-element-count}{{3}{12}{Memory Allocation in MPI Processes}{equation.5.3}{}}
 \newlabel{eq:lpu-capacity-req}{{4}{12}{Memory Allocation in MPI Processes}{equation.5.4}{}}
 \newlabel{eq:interval-composition}{{5}{12}{Memory Allocation in MPI Processes}{equation.5.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }}{13}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:partition-function}{{8}{13}{An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}LPU Metadata Management}{13}{subsubsection.5.2.1}\protected@file@percent }
 \newlabel{subsec:lpu-data-mgmt}{{5.2.1}{13}{LPU Metadata Management}{subsubsection.5.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Data Access During LPU Computation}{14}{subsection.5.3}\protected@file@percent }
-\newlabel{subsec:lpu-data-access}{{5.3}{14}{Data Access During LPU Computation}{subsection.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Flow Execution Code Generation}{14}{section.6}\protected@file@percent }
-\newlabel{sec:flow-exec-code-gen}{{6}{14}{Flow Execution Code Generation}{section.6}{}}
-\newlabel{luf-thread-run-part}{{5}{14}{A small portion of the thread run function for block-LUF showing how stage functions are invoked for LPUs in interim C++ code}{lstlisting.0.0.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}A small portion of the thread run function for block-LUF showing how stage functions are invoked for LPUs in interim C++ code.}{14}{lstlisting.0.0.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces An illustration of the process of retrieving data parts from Data Parts Registry using an LPU ID during block-LU factorization.\relax }}{15}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:part-retrieval}{{9}{15}{An illustration of the process of retrieving data parts from Data Parts Registry using an LPU ID during block-LU factorization.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Data Access During LPU Computation}{13}{subsection.5.3}\protected@file@percent }
+\newlabel{subsec:lpu-data-access}{{5.3}{13}{Data Access During LPU Computation}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Flow Execution Code Generation}{13}{section.6}\protected@file@percent }
+\newlabel{sec:flow-exec-code-gen}{{6}{13}{Flow Execution Code Generation}{section.6}{}}
+\newlabel{luf-thread-run-part}{{5}{13}{A small portion of the thread run function for block-LUF showing how stage functions are invoked for LPUs in interim C++ code}{lstlisting.0.0.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}A small portion of the thread run function for block-LUF showing how stage functions are invoked for LPUs in interim C++ code.}{13}{lstlisting.0.0.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces An illustration of the process of retrieving data parts from Data Parts Registry using an LPU ID during block-LU factorization.\relax }}{14}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:part-retrieval}{{8}{14}{An illustration of the process of retrieving data parts from Data Parts Registry using an LPU ID during block-LU factorization.\relax }{figure.caption.8}{}}
 \newlabel{luf-saxpy-C}{{6}{15}{A truncatted version of the C++ stage function generated by the back-end compiler for the saxpy computation stage of the Block-LU factorization task}{lstlisting.0.0.6}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {6}A truncatted version of the C++ stage function generated by the back-end compiler for the saxpy computation stage of the Block-LU factorization task.}{15}{lstlisting.0.0.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Synchronization \& Communication}{16}{section.7}\protected@file@percent }
-\newlabel{sec:sync-primitives}{{7}{16}{Synchronization \& Communication}{section.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Resolving Synchronization Dependencies}{16}{subsection.7.1}\protected@file@percent }
-\newlabel{subsec:sync-dependencies}{{7.1}{16}{Resolving Synchronization Dependencies}{subsection.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Synchronization \& Communication}{15}{section.7}\protected@file@percent }
+\newlabel{sec:sync-primitives}{{7}{15}{Synchronization \& Communication}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Resolving Synchronization Dependencies}{15}{subsection.7.1}\protected@file@percent }
+\newlabel{subsec:sync-dependencies}{{7.1}{15}{Resolving Synchronization Dependencies}{subsection.7.1}{}}
 \newlabel{luf-sync}{{7}{16}{A part of the thread run function of block-LU factorization interim C++ code illustring how synchronization is implemented}{lstlisting.0.0.7}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7}A part of the thread run function of block-LU factorization interim C++ code illustring how synchronization is implemented.}{16}{lstlisting.0.0.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Resolving Communication Dependencies}{17}{subsection.7.2}\protected@file@percent }
-\newlabel{subse:comm-dependencies}{{7.2}{17}{Resolving Communication Dependencies}{subsection.7.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }}{17}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:array-communicator}{{10}{17}{The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Resolving Communication Dependencies}{16}{subsection.7.2}\protected@file@percent }
+\newlabel{subse:comm-dependencies}{{7.2}{16}{Resolving Communication Dependencies}{subsection.7.2}{}}
+\citation{6312198}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }}{17}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:array-communicator}{{9}{17}{The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }{figure.caption.9}{}}
 \newlabel{luf-comm}{{8}{17}{A part of the thread run function of block-LU factorization interim C++ code illustring use of an array communicator}{lstlisting.0.0.8}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {8}A part of the thread run function of block-LU factorization interim C++ code illustring use of an array communicator.}{17}{lstlisting.0.0.8}\protected@file@percent }
-\citation{6312198}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces An illustration of how relative positions of the LPSes in the LPS hierarchy involved in a data dependency determine the nature of MPI communication primitives.\relax }}{18}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:map-conf-to-comm}{{10}{18}{An illustration of how relative positions of the LPSes in the LPS hierarchy involved in a data dependency determine the nature of MPI communication primitives.\relax }{figure.caption.10}{}}
 \newlabel{comm-eq}{{6}{18}{Resolving Communication Dependencies}{equation.7.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces An illustration of how relative positions of the LPSes in the LPS hierarchy involved in a data dependency determine the nature of MPI communication primitives.\relax }}{19}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:map-conf-to-comm}{{11}{19}{An illustration of how relative positions of the LPSes in the LPS hierarchy involved in a data dependency determine the nature of MPI communication primitives.\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Environment Management}{19}{section.8}\protected@file@percent }
-\newlabel{sec:env-mgmt}{{8}{19}{Environment Management}{section.8}{}}
-\newlabel{highp5-cg}{{9}{19}{The program coordinator module for a multi-task implementation of the conjugate gradient program}{lstlisting.0.0.9}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}The program coordinator module for a multi-task implementation of the conjugate gradient program.}{19}{lstlisting.0.0.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Environment Management}{18}{section.8}\protected@file@percent }
+\newlabel{sec:env-mgmt}{{8}{18}{Environment Management}{section.8}{}}
+\newlabel{highp5-cg}{{9}{18}{The program coordinator module for a multi-task implementation of the conjugate gradient program}{lstlisting.0.0.9}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}The program coordinator module for a multi-task implementation of the conjugate gradient program.}{18}{lstlisting.0.0.9}\protected@file@percent }
 \citation{9492415}
 \citation{9658212}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Experiments and Analysis}{20}{section.9}\protected@file@percent }
-\newlabel{sec:experience}{{9}{20}{Experiments and Analysis}{section.9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Descriptions of the Building-block Applications being Used for Performance Experiments\relax }}{21}{table.caption.12}\protected@file@percent }
-\newlabel{tab:problem-char}{{1}{21}{Descriptions of the Building-block Applications being Used for Performance Experiments\relax }{table.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Execution time comparison for block LU factorization of a $30720^2$ Square Matrix for different number of nodes.\relax }}{21}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:chart-bluf}{{12}{21}{Execution time comparison for block LU factorization of a $30720^2$ Square Matrix for different number of nodes.\relax }{figure.caption.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Execution time comparison for finite difference calculation on a 204800 by 2048 rectangular plate using hundred thousand Jacobi iterations.\relax }}{21}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:chart-stencil}{{13}{21}{Execution time comparison for finite difference calculation on a 204800 by 2048 rectangular plate using hundred thousand Jacobi iterations.\relax }{figure.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Execution time comparison for conjugate gradient computation for a 95\% sparse $51200^2$ square matrix for 51200 iterations.\relax }}{22}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:chart-cg}{{14}{22}{Execution time comparison for conjugate gradient computation for a 95\% sparse $51200^2$ square matrix for 51200 iterations.\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Detail breakdown of the normalized execution times for three building block programs with large input sizes and 100 nodes scenario.\relax }}{22}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:chart-comparison}{{15}{22}{Detail breakdown of the normalized execution times for three building block programs with large input sizes and 100 nodes scenario.\relax }{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{22}{section.10}\protected@file@percent }
-\newlabel{sec:conclusion}{{10}{22}{Conclusion}{section.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Experiments and Analysis}{19}{section.9}\protected@file@percent }
+\newlabel{sec:experience}{{9}{19}{Experiments and Analysis}{section.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Execution time comparison for block LU factorization of a $30720^2$ Square Matrix for different number of nodes.\relax }}{20}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:chart-bluf}{{11}{20}{Execution time comparison for block LU factorization of a $30720^2$ Square Matrix for different number of nodes.\relax }{figure.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Descriptions of the Building-block Applications being Used for Performance Experiments\relax }}{21}{table.caption.11}\protected@file@percent }
+\newlabel{tab:problem-char}{{1}{21}{Descriptions of the Building-block Applications being Used for Performance Experiments\relax }{table.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Execution time comparison for finite difference calculation on a 204800 by 2048 rectangular plate using hundred thousand Jacobi iterations.\relax }}{21}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:chart-stencil}{{12}{21}{Execution time comparison for finite difference calculation on a 204800 by 2048 rectangular plate using hundred thousand Jacobi iterations.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Execution time comparison for conjugate gradient computation for a 95\% sparse $51200^2$ square matrix for 51200 iterations.\relax }}{21}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:chart-cg}{{13}{21}{Execution time comparison for conjugate gradient computation for a 95\% sparse $51200^2$ square matrix for 51200 iterations.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Detail breakdown of the normalized execution times for three building block programs with large input sizes and 100 nodes scenario.\relax }}{21}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:chart-comparison}{{14}{21}{Detail breakdown of the normalized execution times for three building block programs with large input sizes and 100 nodes scenario.\relax }{figure.caption.15}{}}
 \bibstyle{wileyNJD-Chicago}
 \bibdata{refs}
 \bibcite{Dongarra2011}{{1}{Dongarra and Luszczek}{{Dongarra and Luszczek}}{{}}}
 \bibcite{10485138}{{2}{Atchley et~al.}{{Atchley, Zimmer, Lange, Bernholdt, Melesse~Vergara, Beck, Brim, Budiardja, Chandrasekaran, Eisenbach, Evans, Ezell, Frontiere, Georgiadou, Glenski, Grete, Hamilton, Holmen, Huebl, Jacobson, Joubert, McMahon, Merzari, Moore, Myers, Nichols, Oral, Papatheodore, Perez, Rogers, Schneider, Vay, and Yeung}}{{}}}
 \bibcite{10.1145/158439.158907}{{3}{Lilja}{{Lilja}}{{}}}
 \bibcite{Snyder:1986:TAS:17814.17826}{{4}{Snyder}{{Snyder}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{22}{section.10}\protected@file@percent }
+\newlabel{sec:conclusion}{{10}{22}{Conclusion}{section.10}{}}
 \bibcite{10.1145/42411.42415}{{5}{Gustafson}{{Gustafson}}{{}}}
 \bibcite{Foster:1995:DBP:527029}{{6}{Foster}{{Foster}}{{}}}
 \bibcite{Walker96mpi:a}{{7}{Walker et~al.}{{Walker, Walker, Dongarra, and Dongarra}}{{}}}
@@ -268,5 +262,5 @@
 \bibcite{6312198}{{64}{Pfister and Norton}{{Pfister and Norton}}{{}}}
 \bibcite{9492415}{{65}{Matsuoka}{{Matsuoka}}{{}}}
 \bibcite{9658212}{{66}{Sato et~al.}{{Sato, Kodama, Tsuji, and Odajima}}{{}}}
-\FirstPg{1}\LastPg{25}
-\gdef \@abspage@last{25}
+\FirstPg{1}\LastPg{24}
+\gdef \@abspage@last{24}
