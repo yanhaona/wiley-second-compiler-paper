@@ -465,14 +465,6 @@ Niklaus Wirth 1974.
 \newblock ``On the Design of Programming Languages..''   In {\it IFIP
   Congress}, Vol~74,   386--393.
 
-\bibitem[\protect\citeauthoryear{Kamil and Yelick}{Kamil and
-  Yelick}{}]{kamil2013hierarchical}
-Amir Kamil, and Katherine Yelick. 2013.
-\newblock ``Hierarchical computation in the SPMD programming model.''   In {\it
-  International Workshop on Languages and Compilers for Parallel Computing},
-  3--19.
-\newblock Springer.
-
 \bibitem[\protect\citeauthoryear{Yanhaona and Grimshaw}{Yanhaona and
   Grimshaw}{}]{yanAndrewPCubeS}
 Muhammad~N. Yanhaona, and Andrew~S. Grimshaw. 2014.
@@ -484,6 +476,14 @@ V.~Rajaraman.
 \newblock
 \newblock ``Frontier --- World's First ExaFLOPS Supercomputer.''  {\it
   Resonance\/}~28, no. 4 (2023): 567--576.
+
+\bibitem[\protect\citeauthoryear{Kamil and Yelick}{Kamil and
+  Yelick}{}]{kamil2013hierarchical}
+Amir Kamil, and Katherine Yelick. 2013.
+\newblock ``Hierarchical computation in the SPMD programming model.''   In {\it
+  International Workshop on Languages and Compilers for Parallel Computing},
+  3--19.
+\newblock Springer.
 
 \bibitem[\protect\citeauthoryear{Hiranandani, Kennedy, Koelbel, Kremer, and
   Tseng}{Hiranandani et~al.}{}]{10.1007/BFb0038655}
