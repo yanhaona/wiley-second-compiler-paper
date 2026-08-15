@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: block-LUF-scheme.fig
 %%Creator: fig2dev Version 3.2.8b
-%%CreationDate: 2026-04-07 11:37:43
+%%CreationDate: 2026-08-15 22:22:29
 %%BoundingBox: 0 0 507 430
 %%Magnification: 1.0000
 %%EndComments
@@ -12,9 +12,9 @@ $F2psDict /mtrx matrix put
 /col-1 {0 setgray} bind def
 /col0 {0.000 0.000 0.000 srgb} bind def
 /col7 {1.000 1.000 1.000 srgb} bind def
-/col11 {0.530 0.810 1.000 srgb} bind def
-/col17 {0.000 0.820 0.820 srgb} bind def
-/col28 {1.000 0.630 0.630 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
 /col30 {1.000 0.880 0.880 srgb} bind def
 
 end
@@ -84,18 +84,8 @@ n 13455 2790 m 13590 2790 l 13590 9495 l 13455 9495 l
  cp gs col7 1.00 shd ef gr gs col7 s gr % Polyline
 n 5625 2790 m
  7695 4590 l gs col0 s gr % Polyline
-n 7695 4050 m
- 7695 9450 l gs col0 s gr % Polyline
-n 7065 2700 m
- 7065 9450 l gs col0 s gr % Polyline
 n 5580 2745 m 7065 4050 l 7065 9450 l 5580 9450 l
  5580 2745 l  cp gs col30 1.00 shd ef gr gs col0 s gr % Polyline
-n 5580 2745 m 13230 2745 l 13230 9450 l 5580 9450 l
- cp gs col0 s gr % Polyline
-n 7065 4050 m 7695 4590 l 13230 4590 l 13230 4050 l
- 7065 4050 l  cp gs col17 1.00 shd ef gr gs col0 s gr % Polyline
-n 7065 4050 m 7695 4590 l 7695 9450 l 7110 9450 l 7065 9450 l
- 7065 4050 l  cp gs col11 1.00 shd ef gr gs col0 s gr % Polyline
 n 7065 4590 m
  13230 4590 l gs col0 s gr % Polyline
 n 5580 4050 m
@@ -111,8 +101,6 @@ n 13350 4186 m 13320 4066 l 13290 4186 l 13350 4186 l  cp gs 0.00 setgray ef gr 
 % arrowhead
 n 13290 4454 m 13320 4574 l 13350 4454 l 13290 4454 l  cp gs 0.00 setgray ef gr  col0 s
 % Polyline
-n 5580 2745 m 7065 4050 l 13230 4050 l 13230 2745 l
- 5580 2745 l  cp gs col28 1.00 shd ef gr gs col0 s gr % Polyline
 n 7695 4590 m
  7695 4050 l gs col0 s gr % Polyline
 n 7065 4050 m
@@ -126,27 +114,40 @@ n 7740 4635 m
 % arrowhead
 15.000 slw
 n 8323 5205 m 8443 5250 l 8383 5137 l 8323 5205 l  cp gs 0.00 setgray ef gr  col0 s
-/Times-Italic ff 238.13 scf sf
-6120 7425 m
-gs 1 -1 sc  90.0 rot (Completed part of L) col0 sh gr
-/Times-Italic ff 238.13 scf sf
-8055 3420 m
-gs 1 -1 sc (Completed part of U) col0 sh gr
-/Times-Italic ff 254.00 scf sf
+% Polyline
+7.500 slw
+n 7065 4050 m 7695 4590 l 13230 4590 l 13230 4050 l
+ 7065 4050 l  cp gs col15 1.00 shd ef gr gs col0 s gr % Polyline
+n 7065 2700 m
+ 7065 9450 l gs col0 s gr % Polyline
+n 7695 4050 m
+ 7695 9450 l gs col0 s gr % Polyline
+n 7065 4050 m 7695 4590 l 7695 9450 l 7110 9450 l 7065 9450 l
+ 7065 4050 l  cp gs col8 1.00 shd ef gr gs col0 s gr % Polyline
+n 5580 2745 m 13230 2745 l 13230 9450 l 5580 9450 l
+ cp gs col0 s gr % Polyline
+n 5580 2745 m 7065 4050 l 13230 4050 l 13230 2745 l
+ 5580 2745 l  cp gs col18 1.00 shd ef gr gs col0 s gr /Times-Italic ff 254.00 scf sf
 13455 4410 m
 gs 1 -1 sc (b) col0 sh gr
-/Times-Italic ff 238.13 scf sf
+/Times-BoldItalic ff 238.13 scf sf
+8055 3420 m
+gs 1 -1 sc (Completed part of U) col7 sh gr
+/Times-BoldItalic ff 238.13 scf sf
+7875 4365 m
+gs 1 -1 sc (Under update U block not reflected in A yet) col7 sh gr
+/Times-BoldItalic ff 238.13 scf sf
+6120 7425 m
+gs 1 -1 sc  90.0 rot (Completed part of L) col0 sh gr
+/Times-BoldItalic ff 238.13 scf sf
 7380 9135 m
-gs 1 -1 sc  90.0 rot (Under update L block not reflected in A yet) col0 sh gr
-/Times-Italic ff 238.13 scf sf
+gs 1 -1 sc  90.0 rot (Under update L block not reflected in A yet) col7 sh gr
+/Times-BoldItalic ff 238.13 scf sf
 7875 6660 m
 gs 1 -1 sc (Rest of A to be updated using Saxpy) col0 sh gr
-/Times-Italic ff 238.13 scf sf
+/Times-BoldItalic ff 238.13 scf sf
 7875 6930 m
 gs 1 -1 sc (after completion of current U and L blocks) col0 sh gr
-/Times-Italic ff 238.13 scf sf
-7875 4365 m
-gs 1 -1 sc (Under update U block not reflected in A yet) col0 sh gr
 % here ends figure;
 pagefooter
 showpage
