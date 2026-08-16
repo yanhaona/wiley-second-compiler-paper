@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  15 AUG 2026 22:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  16 AUG 2026 21:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2070,6 +2070,9 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2103,19 +2106,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[13])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./Programs/c-code/block_luf_part2.cc
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[14]
+[13]) (./Programs/c-code/block_luf_part2.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2127,11 +2118,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[14]) (./Programs/c-code/block_luf_sync.cc
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-(./Programs/c-code/block_luf_sync.cc
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2152,6 +2147,8 @@ and I'll forget about whatever was undefined.
 Package Listings Warning: Text dropped after begin of listing on input line 1.
 
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
  file (type eps)
 <./images//Figures/compilation/array-communicator-architecture.eps>
@@ -2182,6 +2179,9 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [17] (./Programs/Conjugate-Gradient.p
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2331,7 +2331,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Here is how much of TeX's memory you used:
  41432 strings out of 476191
  791001 string characters out of 5812073
- 1386128 words of memory out of 5000000
+ 1377128 words of memory out of 5000000
  61300 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
