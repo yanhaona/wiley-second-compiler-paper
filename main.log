@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  16 AUG 2026 21:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  18 AUG 2026 01:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2060,18 +2060,13 @@ erating
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: ./images//Figures/interval-function.eps Graphic file (type eps)
-<./images//Figures/interval-function.eps>
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+File: ./images//Figures/interval-function.eps Graphic file (type eps)
+<./images//Figures/interval-function.eps>
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
@@ -2083,7 +2078,15 @@ Missing character: There is no ^^9d (U+009D) in font [lmroman9-regular]:mapping
 File: ./images//Figures/compilation/part-container-tree-search.eps Graphic file
  (type eps)
 <./images//Figures/compilation/part-container-tree-search.eps>
-(./Programs/c-code/block_luf_part1.cc
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[13] (./Programs/c-code/block_luf_part1.cc
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -2101,12 +2104,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
+)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[13]) (./Programs/c-code/block_luf_part2.cc
+[14] (./Programs/c-code/block_luf_part2.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2118,20 +2121,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
+)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[14]) (./Programs/c-code/block_luf_sync.cc
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[15]
+[15] (./Programs/c-code/block_luf_sync.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2147,17 +2142,15 @@ and I'll forget about whatever was undefined.
 Package Listings Warning: Text dropped after begin of listing on input line 1.
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
- file (type eps)
-<./images//Figures/compilation/array-communicator-architecture.eps>
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[16] (./Programs/c-code/block_lu_comm.cc
+[16]
+File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
+ file (type eps)
+<./images//Figures/compilation/array-communicator-architecture.eps>
+ (./Programs/c-code/block_lu_comm.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2170,18 +2163,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 )
-File: ./images//Figures/compilation/confinement-to-comm-pri.eps Graphic file (t
-ype eps)
-<./images//Figures/compilation/confinement-to-comm-pri.eps>
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[17] (./Programs/Conjugate-Gradient.p
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+[17]
+File: ./images//Figures/compilation/confinement-to-comm-pri.eps Graphic file (t
+ype eps)
+<./images//Figures/compilation/confinement-to-comm-pri.eps>
+ (./Programs/Conjugate-Gradient.p
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2202,12 +2192,15 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 651
+Underfull \hbox (badness 10000) detected at line 659
 []
  []
 
@@ -2217,19 +2210,19 @@ Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
 =tex-text;!
 File: ./images//Figures/charts/bluf-chart.pdf Graphic file (type pdf)
 <use ./images//Figures/charts/bluf-chart.pdf>
+File: ./images//Figures/charts/stencil-chart.pdf Graphic file (type pdf)
+<use ./images//Figures/charts/stencil-chart.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ./images//Figures/charts/stencil-chart.pdf Graphic file (type pdf)
-<use ./images//Figures/charts/stencil-chart.pdf>
-File: ./images//Figures/charts/conj-grad-chart.pdf Graphic file (type pdf)
-<use ./images//Figures/charts/conj-grad-chart.pdf>
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [20]
+File: ./images//Figures/charts/conj-grad-chart.pdf Graphic file (type pdf)
+<use ./images//Figures/charts/conj-grad-chart.pdf>
 File: ./images//Figures/charts/comparison-chart.pdf Graphic file (type pdf)
 <use ./images//Figures/charts/comparison-chart.pdf>
 
@@ -2237,17 +2230,20 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[21] (./main.bbl
-Underfull \hbox (badness 5893) in paragraph at lines 20--31
-\TU/lmr/m/n/8.5 Michael J. Brim, Reuben Budiardja, Sunita Chan-
- []
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[22]
+[22] (./main.bbl
+Underfull \hbox (badness 5893) in paragraph at lines 20--31
+\TU/lmr/m/n/8.5 Michael J. Brim, Reuben Budiardja, Sunita Chan-
+ []
+
+
 Underfull \hbox (badness 1194) in paragraph at lines 67--70
 []\TU/lmr/m/n/8.5 David R. Butenhof 1997.  \TU/lmr/m/it/8.5 Programming with PO
 SIX
@@ -2267,6 +2263,11 @@ Underfull \hbox (badness 3058) in paragraph at lines 135--142
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[23]
 ! Misplaced alignment tab character &.
 l.251 ...formance Fortran.''  {\it IEEE Parallel &
                                                    Distributed
@@ -2288,17 +2289,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[23]
 Underfull \hbox (badness 2142) in paragraph at lines 351--357
 []\TU/lmr/m/n/8.5 Kathy Yelick, Luigi Semenzato, Geoff Pike, Carleton
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 ! Misplaced alignment tab character &.
 l.379   Symposium on Parallel &
@@ -2311,30 +2308,37 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1910) in paragraph at lines 443--448
 []\TU/lmr/m/n/8.5 Rahulkumar Gayatri, Stephen L Olivier, Christian R
  []
 
-)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[24] (./main.aux) )
+[24])
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[25
+
+] (./main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 228 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41432 strings out of 476191
- 791001 string characters out of 5812073
- 1377128 words of memory out of 5000000
- 61300 multiletter control sequences out of 15000+600000
+ 41435 strings out of 476191
+ 791109 string characters out of 5812073
+ 1385552 words of memory out of 5000000
+ 61303 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
- 98i,19n,94p,2087b,1965s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,19n,94p,2087b,1930s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (24 pages).
+Output written on main.pdf (25 pages).

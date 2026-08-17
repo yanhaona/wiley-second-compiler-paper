@@ -1,4 +1,4 @@
-\begin{thebibliography}{66}
+\begin{thebibliography}{67}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -492,6 +492,14 @@ S.~Hiranandani, K.~Kennedy, C.~Koelbel, U.~Kremer,, and C.~W. Tseng. 1992.
   Languages and Compilers for Parallel Computing}, edited by Utpal Banerjee,
   David Gelernter, Alex Nicolau, and David Padua,   18--34.
 \newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[\protect\citeauthoryear{Bonachea and Hargrove}{Bonachea and
+  Hargrove}{}]{10.1007/978-3-030-34627-0_11}
+Dan Bonachea, and Paul~H. Hargrove. 2019.
+\newblock ``GASNet-EX: A High-Performance, Portable Communication Library for
+  Exascale.''   In {\it Languages and Compilers for Parallel Computing}, edited
+  by Mary Hall and Hari Sundar,   138--158.
+\newblock Cham: Springer International Publishing.
 
 \bibitem[\protect\citeauthoryear{Pfister and Norton}{Pfister and
   Norton}{}]{6312198}
