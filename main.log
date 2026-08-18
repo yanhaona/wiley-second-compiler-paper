@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  18 AUG 2026 01:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  18 AUG 2026 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2068,13 +2068,18 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 File: ./images//Figures/interval-function.eps Graphic file (type eps)
 <./images//Figures/interval-function.eps>
 
+
+LaTeX Warning: Command \textminus invalid in math mode on input line 522.
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [12]
-Missing character: There is no ^^9d (U+009D) in font [lmroman9-regular]:mapping
-=tex-text;!
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 539.
+
 File: ./images//Figures/compilation/part-container-tree-search.eps Graphic file
  (type eps)
 <./images//Figures/compilation/part-container-tree-search.eps>
@@ -2104,12 +2109,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[14] (./Programs/c-code/block_luf_part2.cc
+) (./Programs/c-code/block_luf_part2.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2121,7 +2121,15 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[14])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2162,12 +2170,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-)
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[17]
+[17])
 File: ./images//Figures/compilation/confinement-to-comm-pri.eps Graphic file (t
 ype eps)
 <./images//Figures/compilation/confinement-to-comm-pri.eps>
@@ -2189,9 +2197,6 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [18])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2335,7 +2340,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Here is how much of TeX's memory you used:
  41435 strings out of 476191
  791109 string characters out of 5812073
- 1385552 words of memory out of 5000000
+ 1375690 words of memory out of 5000000
  61303 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
