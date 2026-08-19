@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  18 AUG 2026 22:59
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  19 AUG 2026 21:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2179,7 +2179,11 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 File: ./images//Figures/compilation/confinement-to-comm-pri.eps Graphic file (t
 ype eps)
 <./images//Figures/compilation/confinement-to-comm-pri.eps>
- (./Programs/Conjugate-Gradient.p
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./Programs/Conjugate-Gradient.p
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2196,16 +2200,16 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[18])
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 659
+Underfull \hbox (badness 10000) detected at line 662
 []
  []
 
@@ -2215,8 +2219,6 @@ Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
 =tex-text;!
 File: ./images//Figures/charts/bluf-chart.pdf Graphic file (type pdf)
 <use ./images//Figures/charts/bluf-chart.pdf>
-File: ./images//Figures/charts/stencil-chart.pdf Graphic file (type pdf)
-<use ./images//Figures/charts/stencil-chart.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2226,6 +2228,8 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [20]
+File: ./images//Figures/charts/stencil-chart.pdf Graphic file (type pdf)
+<use ./images//Figures/charts/stencil-chart.pdf>
 File: ./images//Figures/charts/conj-grad-chart.pdf Graphic file (type pdf)
 <use ./images//Figures/charts/conj-grad-chart.pdf>
 File: ./images//Figures/charts/comparison-chart.pdf Graphic file (type pdf)
@@ -2236,9 +2240,6 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2294,13 +2295,12 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 2142) in paragraph at lines 351--357
 []\TU/lmr/m/n/8.5 Kathy Yelick, Luigi Semenzato, Geoff Pike, Carleton
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 ! Misplaced alignment tab character &.
 l.379   Symposium on Parallel &
@@ -2313,11 +2313,6 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 443--448
-[]\TU/lmr/m/n/8.5 Rahulkumar Gayatri, Stephen L Olivier, Christian R
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2325,7 +2320,12 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[24])
+[24]
+Underfull \hbox (badness 1910) in paragraph at lines 443--448
+[]\TU/lmr/m/n/8.5 Rahulkumar Gayatri, Stephen L Olivier, Christian R
+ []
+
+)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2340,7 +2340,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Here is how much of TeX's memory you used:
  41435 strings out of 476191
  791109 string characters out of 5812073
- 1375690 words of memory out of 5000000
+ 1397690 words of memory out of 5000000
  61303 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
