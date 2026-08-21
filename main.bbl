@@ -1,4 +1,4 @@
-\begin{thebibliography}{67}
+\begin{thebibliography}{68}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -520,5 +520,14 @@ Mitsuhisa Sato, Yuetsu Kodama, Miwako Tsuji,, and Tesuya Odajima.
 \newblock
 \newblock ``Co-Design and System for the Supercomputer “Fugaku”.''  {\it
   IEEE Micro\/}~42, no. 2 (2022): 26--34.
+
+\bibitem[\protect\citeauthoryear{Asanovic, Bodik, Catanzaro, Gebis, Husbands,
+  Keutzer, Patterson, Plishker, Shalf, Williams, et~al.}{Asanovic
+  et~al.}{}]{asanovic2006landscape}
+Krste Asanovic, Ras Bodik, Bryan Catanzaro, Joseph Gebis, Parry Husbands, Kurt
+  Keutzer, David Patterson, William Plishker, John Shalf, Samuel Williams,
+  et~al.
+\newblock ``The Landscape of Parallel Computing: A View From Berkeley.''  .
+\newblock {\it California, Berkeley\/}.
 
 \end{thebibliography}

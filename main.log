@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  19 AUG 2026 21:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  21 AUG 2026 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2184,6 +2184,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./Programs/Conjugate-Gradient.p
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[18]
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2195,21 +2203,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[18]
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 662
+Underfull \hbox (badness 10000) detected at line 666
 []
  []
 
@@ -2217,8 +2220,6 @@ Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
 =tex-text;!
 Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
 =tex-text;!
-File: ./images//Figures/charts/bluf-chart.pdf Graphic file (type pdf)
-<use ./images//Figures/charts/bluf-chart.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2228,6 +2229,8 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [20]
+File: ./images//Figures/charts/bluf-chart.pdf Graphic file (type pdf)
+<use ./images//Figures/charts/bluf-chart.pdf>
 File: ./images//Figures/charts/stencil-chart.pdf Graphic file (type pdf)
 <use ./images//Figures/charts/stencil-chart.pdf>
 File: ./images//Figures/charts/conj-grad-chart.pdf Graphic file (type pdf)
@@ -2244,7 +2247,11 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[22] (./main.bbl
+[22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./main.bbl
 Underfull \hbox (badness 5893) in paragraph at lines 20--31
 \TU/lmr/m/n/8.5 Michael J. Brim, Reuben Budiardja, Sunita Chan-
  []
@@ -2256,6 +2263,14 @@ SIX
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[23]
 Underfull \hbox (badness 3364) in paragraph at lines 126--131
 []\TU/lmr/m/n/8.5 Muhammad Nur Yanhaona, Andrew Grimshaw„ and
  []
@@ -2269,11 +2284,6 @@ Underfull \hbox (badness 3058) in paragraph at lines 135--142
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[23]
 ! Misplaced alignment tab character &.
 l.251 ...formance Fortran.''  {\it IEEE Parallel &
                                                    Distributed
@@ -2295,13 +2305,19 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 2142) in paragraph at lines 351--357
 []\TU/lmr/m/n/8.5 Kathy Yelick, Luigi Semenzato, Geoff Pike, Carleton
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[24]
 ! Misplaced alignment tab character &.
 l.379   Symposium on Parallel &
                                 Distributed Processing},   1--12.
@@ -2313,37 +2329,30 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[24]
 Underfull \hbox (badness 1910) in paragraph at lines 443--448
 []\TU/lmr/m/n/8.5 Rahulkumar Gayatri, Stephen L Olivier, Christian R
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[25
-
-] (./main.aux) )
+[25] (./main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 228 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41435 strings out of 476191
- 791109 string characters out of 5812073
- 1397690 words of memory out of 5000000
- 61303 multiletter control sequences out of 15000+600000
+ 41438 strings out of 476191
+ 791196 string characters out of 5812073
+ 1399819 words of memory out of 5000000
+ 61306 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
- 98i,19n,94p,2087b,1930s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,19n,94p,2087b,1917s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (25 pages).
