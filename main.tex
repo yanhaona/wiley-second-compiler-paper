@@ -730,7 +730,24 @@ We observe that HighP5 block-LU factorization is faster than the reference imple
 
 The reference and HighP5 implementations are still on par for the 100 node scenario for the 5-point stencil program. However, the decomposition of execution times is quite different. The HighP5 implementation again takes more time for memory management compared to the reference due to additional data structure setups. For this problem, I/O operation scaled well for a large number of MPI processes due to the fact that they sequentially read data from consecutive chunks of the file, which was not the case for block-LU factorization. The communication cost in HighP5 implementation is higher than that of the reference, again, due to slow synchronizations. However, a smaller cost of computation offsets the higher communication cost. The only sensible explanation for this is better cache utilization through cross-thread collaboration in the HighP5 implementation that the reference cannot avail.
 
-Finally, the HighP5 implementation for the conjugate gradient is slightly slower than the reference implementation. One reason is the higher memory management overhead, which was expected. However, the other reason, a higher computation cost for this problem is a bit surprising. We suspect that since computation per thread/node in this problem is significantly lower than that of the other problems, the overhead computation has a more dominant impact here. We should attempt further improvements in the code generation strategy for computation stages of HighP5 tasks. Finally, as both reference and HighP5 implementations are pure MPI codes for this problem, no slowness in communication time is observed for this problem. However, we are unclear why the communication is slightly faster in the HighP5 version.   
+Finally, the HighP5 implementation for the conjugate gradient is slightly slower than the reference implementation. One reason is the higher memory management overhead, which was expected. However, the other reason, a higher computation cost for this problem is a bit surprising. We suspect that since computation per thread/node in this problem is significantly lower than that of the other problems, the overhead computation has a more dominant impact here. We should attempt further improvements in the code generation strategy for computation stages of HighP5 tasks. Finally, as both reference and HighP5 implementations are pure MPI codes for this problem, no slowness in communication time is observed for this problem. However, we are unclear why the communication is slightly faster in the HighP5 version.
+
+\subsection{Impact of Compiler Optimizations}
+\label{subsec:comp-opt-expr}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\columnwidth]{Figures/charts/bluf-diff-versions-performance.pdf}
+	\caption{Comparison of normalized execution times of different HighP5 executables for block LU factorization on 64 nodes.}
+	\label{fig:chart-bluf-diff-versions}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\columnwidth]{Figures/charts/stencil-diff-versions-performance.pdf}
+	\caption{Comparison of normalized execution times of different HighP5 executables for finite difference calculation on 64 nodes.}
+	\label{fig:chart-stencil-diff-versions}
+\end{figure}   
 
 \section{Conclusion}
 \label{sec:conclusion}
