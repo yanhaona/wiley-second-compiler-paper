@@ -730,24 +730,44 @@ We observe that HighP5 block-LU factorization is faster than the reference imple
 
 The reference and HighP5 implementations are still on par for the 100 node scenario for the 5-point stencil program. However, the decomposition of execution times is quite different. The HighP5 implementation again takes more time for memory management compared to the reference due to additional data structure setups. For this problem, I/O operation scaled well for a large number of MPI processes due to the fact that they sequentially read data from consecutive chunks of the file, which was not the case for block-LU factorization. The communication cost in HighP5 implementation is higher than that of the reference, again, due to slow synchronizations. However, a smaller cost of computation offsets the higher communication cost. The only sensible explanation for this is better cache utilization through cross-thread collaboration in the HighP5 implementation that the reference cannot avail.
 
-Finally, the HighP5 implementation for the conjugate gradient is slightly slower than the reference implementation. One reason is the higher memory management overhead, which was expected. However, the other reason, a higher computation cost for this problem is a bit surprising. We suspect that since computation per thread/node in this problem is significantly lower than that of the other problems, the overhead computation has a more dominant impact here. We should attempt further improvements in the code generation strategy for computation stages of HighP5 tasks. Finally, as both reference and HighP5 implementations are pure MPI codes for this problem, no slowness in communication time is observed for this problem. However, we are unclear why the communication is slightly faster in the HighP5 version.
+The HighP5 implementation for the conjugate gradient is slightly slower than the reference implementation. One reason is the higher memory management overhead, which was expected. However, the other reason, a higher computation cost for this problem is a bit surprising. We suspect that since computation per thread/node in this problem is significantly lower than that of the other problems, the overhead computation has a more dominant impact here. We should attempt further improvements in the code generation strategy for computation stages of HighP5 tasks. Since both reference and HighP5 implementations are pure MPI codes for this problem, no slowness in communication time is observed for this problem. However, we are unclear why the communication is slightly faster in the HighP5 version.
+
 
 \subsection{Impact of Compiler Optimizations}
-\label{subsec:comp-opt-expr}
+\label{subsec:expr-comp-opt}
+{\color{red}
+To understand the effectiveness of various compilation techniques for improving an executable's running time, we ran different versions of the generated executables with the same input and parameter configurations for the 64-node cases discussed earlier and compared their average normalized execution time with the latest version's performance as the reference baseline. In this experiment, each successive version cancels a major compiler optimization present in the previous version by backtracking on our compiler's subversion repository. Compiler optimizations canceled in this manner, in their order of removal, are as follows.
 
+\begin{enumerate}
+    \item \textbf{Version 1} (Disable Caching): cancels careful utilization of caching during filtration, ordering, and grouping of communication buffers inside communicators from the latest version.
+    \item \textbf{Version 2} (Disable Buffer Processing Optimization): removes utilization of thread pools and optimization on the number of steps involved in communication and synchronization operation from Version 1.
+    \item \textbf{Version 3} (Disable Data Transfer Optimization): disables the exploitation of blocked transfer opportunities between data parts and communication buffers during communications from Version 2.
+    \item \textbf{Version 4} (Disable Parallel Initialization): turns off parallelization in data structure setup and input processing during task launching from Version 3.
+    \item \textbf{Version 5} (Disable Sync Primitive Optimization): reverts back to a less sophisticated implementation of synchronization using more semaphore and condition variables from Version 4.
+\end{enumerate}
+
+Figure \ref{fig:chart-bluf-diff-version} illustrates how the performance of block LU factorization deteriorates at each step compared to the performance of the HighP5 baseline version. 
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=\columnwidth]{Figures/charts/bluf-diff-versions-performance.pdf}
-	\caption{Comparison of normalized execution times of different HighP5 executables for block LU factorization on 64 nodes.}
-	\label{fig:chart-bluf-diff-versions}
+\centering
+\includegraphics[width=\columnwidth]{Figures/charts/bluf-diff-versions-performance.pdf}
+\caption{Normalized execution times of different HighP5 block-LUF executable versions for the 64 node scenario.}
+\label{fig:chart-bluf-diff-version}
 \end{figure}
+We observe the most noticeable increase in execution time in the last step when the synchronization primitive's optimization is canceled. In block LU factorization, most data movements and synchronizations occur up and down on a single LPS hierarchy. That is, often many PPU controller threads are waiting for update from a single local/remote controller or visa-versa. As a result, inefficiencies due to extra wait/signaling in semaphores hurt performance the most. However, the findings of Figure \ref{fig:chart-bluf-diff-version} show that all compiler optimization techniques have a noticeable impact on the executable's performance in this problem.
 
+The performance of 5-point stencil follows a different trajectory, as shown in Figure \ref{fig:chart-stencil-diff-version}. 
 \begin{figure}[htb]
-	\centering
-	\includegraphics[width=\columnwidth]{Figures/charts/stencil-diff-versions-performance.pdf}
-	\caption{Comparison of normalized execution times of different HighP5 executables for finite difference calculation on 64 nodes.}
-	\label{fig:chart-stencil-diff-versions}
-\end{figure}   
+\centering
+\includegraphics[width=\columnwidth]{Figures/charts/stencil-diff-versions-performance.pdf}
+\caption{Normalized execution times of different HighP5 iterative stencil executable versions for the 64 node scenario.}
+\label{fig:chart-stencil-diff-version}
+\end{figure}
+We observe the most severe impact on the running time after disabling data transfer optimization between data parts and communication buffers. 5-point stencil involves periodic point-to-point exchanges for overlapped multi-versioned data parts among PPU-controllers in both intra and inter-process scenarios. Optimization of this operation is critical for overall program performance. Compared to block LU factorization, the last synchronization primitive optimization has only a marginal impact. This is again due to a lack of group synchronizations in this problem. Here, a composite PPU controller only synchronizes with the immediate previous and next PPU controller. 
+
+Another noticeable aspect is the apparent ineffectiveness of parallelization of initial data structure setup and input processing during task launches in this problem. For large input sizes, initialization time is dominated by file reading operations. The difference in the decrease of performance in block LU factorization and 5-point stencil when parallelization is removed is most likely due to native OS's file-system optimization for sequential file access effective in 5-point stencil but not for striped file reading that takes place in block LU factorization. If we refer to the execution time decomposition of Figure \ref{fig:chart-comparison}, a significantly higher initialization time for the reference implementations of block LU factorization compared to that of 5-point stencil also supports this assessment.
+
+
+}   
 
 \section{Conclusion}
 \label{sec:conclusion}
