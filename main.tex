@@ -766,6 +766,17 @@ We observe the most severe impact on the running time after disabling data trans
 
 Another noticeable aspect is the apparent ineffectiveness of parallelization of initial data structure setup and input processing during task launches in this problem. For large input sizes, initialization time is dominated by file reading operations. The difference in the decrease of performance in block LU factorization and 5-point stencil when parallelization is removed is most likely due to native OS's file-system optimization for sequential file access effective in 5-point stencil but not for striped file reading that takes place in block LU factorization. If we refer to the execution time decomposition of Figure \ref{fig:chart-comparison}, a significantly higher initialization time for the reference implementations of block LU factorization compared to that of 5-point stencil also supports this assessment.
 
+The performance of the HighP5 conjugate gradient program as we repel various compiler optimizations exhibits yet another surprising trajectory, as depicted in Figure \ref{fig:chart-cg-diff-version}. 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\columnwidth]{Figures/charts/cg-diff-version-performance.pdf}
+\caption{Normalized execution times of different HighP5 conjugate gradient executable versions for the 64 node scenario.}
+\label{fig:chart-cg-diff-version}
+\end{figure}
+
+The disabled caching in the filtration, ordering and grouping of communication buffers worsens the running time by more than $18$ times. This happens because conjugate gradient involves communication between LPS hierarchies. In the 64 node and 8 processes per-node scenario, each PPU controller has to communicate with 511 other PPU controllers, where each communication involves at least one buffer management. At that range, the cost of buffer processing is severely felt in the overall running time if caching is not applied. Subsequent optimizations involving parallelization are ineffective in this problem, due to the pure MPI (a separate process per-core) configuration we used to have parity with the reference baseline discussed earlier.
+
+Overall, the lesson we learn from this experiment is that there is no particular optimization that is the most important. Similarly, there is no priority ordering among the different optimizations. Rather, the compiler should not miss any optimization opportunities to generate executables competitive with optimized low-level implementations.
 
 }   
 
