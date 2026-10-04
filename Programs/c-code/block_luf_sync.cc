@@ -1,4 +1,4 @@
-\begin{interimC}{luf-sync}{A part of the thread run function of block-LU factorization interim C++ code illustring how synchronization is implemented.}	
+\begin{interimC}{luf-sync}{A part of the thread run function of block-LU factorization interim C++ code illustrating how synchronization is implemented.}	
 	while((lpu = threadState->getNextLpu(Space_B, 
 					Space_A, spaceBLpuId)) != NULL) {
 		spaceBLpu = (SpaceB_LPU*) lpu;

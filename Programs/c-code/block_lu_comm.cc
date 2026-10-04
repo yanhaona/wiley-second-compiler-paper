@@ -1,4 +1,4 @@
-\begin{interimC}{luf-comm}{A part of the thread run function of block-LU factorization interim C++ code illustring use of an array communicator.}
+\begin{interimC}{luf-comm}{A part of the thread run function of block-LU factorization interim C++ code illustrating use of an array communicator.}
 if (threadState->isValidPpu(Space_A)) {
 	// invoking user computation
 	int stage19Executed = generatepivotcolumn_stage_18(spaceALpu, 

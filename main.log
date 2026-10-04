@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  2 OCT 2026 20:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  4 OCT 2026 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2068,10 +2068,6 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 File: ./images//Figures/interval-function.eps Graphic file (type eps)
 <./images//Figures/interval-function.eps>
 
-
-LaTeX Warning: Command \textminus invalid in math mode on input line 522.
-
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2138,7 +2134,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
-l.1 ...string how synchronization is implemented.}
+l.1 ...rating how synchronization is implemented.}
                                                   ^^I
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2162,7 +2158,7 @@ File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
-l.1 ...e illustring use of an array communicator.}
+l.1 ...illustrating use of an array communicator.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2212,14 +2208,13 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 666
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) detected at line 668
 []
  []
 
-Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
-=tex-text;!
-Missing character: There is no ^^9d (U+009D) in font [lmroman8-regular]:mapping
-=tex-text;!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2252,7 +2247,7 @@ File: ./images//Figures/charts/bluf-diff-versions-performance.pdf Graphic file
 (type pdf)
 <use ./images//Figures/charts/bluf-diff-versions-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 753--753
+Underfull \hbox (badness 3758) in paragraph at lines 755--755
 []\TU/lmr/bx/n/8 FIGURE 15 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2261,7 +2256,7 @@ File: ./images//Figures/charts/stencil-diff-versions-performance.pdf Graphic fi
 le (type pdf)
 <use ./images//Figures/charts/stencil-diff-versions-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 762--762
+Underfull \hbox (badness 3758) in paragraph at lines 764--764
 []\TU/lmr/bx/n/8 FIGURE 16 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2270,7 +2265,7 @@ File: ./images//Figures/charts/cg-diff-version-performance.pdf Graphic file (ty
 pe pdf)
 <use ./images//Figures/charts/cg-diff-version-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 773--773
+Underfull \hbox (badness 3758) in paragraph at lines 775--775
 []\TU/lmr/bx/n/8 FIGURE 17 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2384,7 +2379,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Here is how much of TeX's memory you used:
  41473 strings out of 476191
  793016 string characters out of 5812073
- 1399307 words of memory out of 5000000
+ 1399310 words of memory out of 5000000
  61338 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
