@@ -1,4 +1,4 @@
-\begin{thebibliography}{68}
+\begin{thebibliography}{69}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -484,6 +484,12 @@ Amir Kamil, and Katherine Yelick. 2013.
   International Workshop on Languages and Compilers for Parallel Computing},
   3--19.
 \newblock Springer.
+
+\bibitem[\protect\citeauthoryear{Sakamoto and Furumoto}{Sakamoto and
+  Furumoto}{}]{Sakamoto2012}
+Kazuki Sakamoto, and Tomohiko Furumoto. 2012.
+\newblock {\it Grand Central Dispatch}, pp.\  139--145.
+\newblock Berkeley, CA: Apress.
 
 \bibitem[\protect\citeauthoryear{Hiranandani, Kennedy, Koelbel, Kremer, and
   Tseng}{Hiranandani et~al.}{}]{10.1007/BFb0038655}

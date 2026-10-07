@@ -96,14 +96,15 @@
 \citation{teichgraber2022julia}
 \citation{wirth1974design}
 \citation{Snyder:1986:TAS:17814.17826}
+\citation{Snyder:1986:TAS:17814.17826}
 \citation{yanAndrewPCubeS}
 \citation{Rajaraman2023}
 \@writefile{toc}{\contentsline {section}{\numberline {3}HighP5 Language Primer}{4}{section.3}\protected@file@percent }
 \newlabel{sec:language-primer}{{3}{4}{HighP5 Language Primer}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Hardware Cognizant Programming}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Execution time comparison among three sequential implementations of classic matrix-matrix multiplication program for small square input matrices. Here, Implementation 1 is unblocked, Implementation 2 processes matrices in sequence of 256 \texttimes 256 blocks, and Implementation 3 processes them in sequence of 64 \texttimes 64 blocks.\relax }}{4}{figure.caption.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Average execution time (on 10 runs) comparison among three sequential implementations of classic matrix-matrix multiplication program for small square input matrices of size $512^2$ to $4096^2$. Here, Implementation 1 is unblocked, Implementation 2 processes matrices in sequence of 256 \texttimes 256 blocks, and Implementation 3 processes them in sequence of 64 \texttimes 64 blocks.\relax }}{4}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:seq-mmm-comparison}{{1}{4}{Execution time comparison among three sequential implementations of classic matrix-matrix multiplication program for small square input matrices. Here, Implementation 1 is unblocked, Implementation 2 processes matrices in sequence of 256 \texttimes 256 blocks, and Implementation 3 processes them in sequence of 64 \texttimes 64 blocks.\relax }{figure.caption.1}{}}
+\newlabel{fig:seq-mmm-comparison}{{1}{4}{Average execution time (on 10 runs) comparison among three sequential implementations of classic matrix-matrix multiplication program for small square input matrices of size $512^2$ to $4096^2$. Here, Implementation 1 is unblocked, Implementation 2 processes matrices in sequence of 256 \texttimes 256 blocks, and Implementation 3 processes them in sequence of 64 \texttimes 64 blocks.\relax }{figure.caption.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }}{5}{figure.caption.2}\protected@file@percent }
 \newlabel{fig:frontier}{{2}{5}{An illustration of two PCubeS machine models of the Frontier Supercomputer. The depictions expand only one parallel processing unit at each level. Furthermore, details of the communication capacities (exact latencies and transaction bandwidth) have not been shown. \relax }{figure.caption.2}{}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Basic LU Factorization algorithm\relax }}{6}{algorithm.1}\protected@file@percent }
@@ -120,6 +121,7 @@
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Single node mapping of block-LU factorization}{7}{lstlisting.0.0.2}\protected@file@percent }
 \newlabel{mapping-luf-2}{{3}{7}{Multi-node mapping of block-LU factorization}{lstlisting.0.0.3}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Multi-node mapping of block-LU factorization}{7}{lstlisting.0.0.3}\protected@file@percent }
+\citation{Sakamoto2012}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The Nature of a HighP5 Executable}{8}{subsection.3.2}\protected@file@percent }
 \newlabel{subsec:behave-exe}{{3.2}{8}{The Nature of a HighP5 Executable}{subsection.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The runtime process model of HighP5 executables. \relax }}{9}{figure.caption.4}\protected@file@percent }
@@ -148,12 +150,12 @@
 \newlabel{eq:1d-element-count}{{3}{12}{Memory Allocation in MPI Processes}{equation.5.3}{}}
 \newlabel{eq:lpu-capacity-req}{{4}{12}{Memory Allocation in MPI Processes}{equation.5.4}{}}
 \newlabel{eq:interval-composition}{{5}{12}{Memory Allocation in MPI Processes}{equation.5.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }}{13}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:partition-function}{{7}{13}{An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS.\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS. The lower layer sees a compacted index space created by the upper layer's blocks.\relax }}{13}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:partition-function}{{7}{13}{An illustration of nested data partition using a two layer hierarchy where Space A is the upper and Space B is the lower LPS. The lower layer sees a compacted index space created by the upper layer's blocks.\relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}LPU Metadata Management}{13}{subsubsection.5.2.1}\protected@file@percent }
 \newlabel{subsec:lpu-data-mgmt}{{5.2.1}{13}{LPU Metadata Management}{subsubsection.5.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Data Access During LPU Computation}{13}{subsection.5.3}\protected@file@percent }
-\newlabel{subsec:lpu-data-access}{{5.3}{13}{Data Access During LPU Computation}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Data Access During LPU Computation}{14}{subsection.5.3}\protected@file@percent }
+\newlabel{subsec:lpu-data-access}{{5.3}{14}{Data Access During LPU Computation}{subsection.5.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Flow Execution Code Generation}{14}{section.6}\protected@file@percent }
 \newlabel{sec:flow-exec-code-gen}{{6}{14}{Flow Execution Code Generation}{section.6}{}}
 \newlabel{luf-thread-run-part}{{5}{14}{A small portion of the thread run function for block-LUF showing how stage functions are invoked for LPUs in interim C++ code}{lstlisting.0.0.5}{}}
@@ -168,8 +170,8 @@
 \newlabel{subsec:sync-dependencies}{{7.1}{16}{Resolving Synchronization Dependencies}{subsection.7.1}{}}
 \newlabel{luf-sync}{{7}{16}{A part of the thread run function of block-LU factorization interim C++ code illustrating how synchronization is implemented}{lstlisting.0.0.7}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {7}A part of the thread run function of block-LU factorization interim C++ code illustrating how synchronization is implemented.}{16}{lstlisting.0.0.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Resolving Communication Dependencies}{16}{subsection.7.2}\protected@file@percent }
-\newlabel{subse:comm-dependencies}{{7.2}{16}{Resolving Communication Dependencies}{subsection.7.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Resolving Communication Dependencies}{17}{subsection.7.2}\protected@file@percent }
+\newlabel{subse:comm-dependencies}{{7.2}{17}{Resolving Communication Dependencies}{subsection.7.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }}{17}{figure.caption.9}\protected@file@percent }
 \newlabel{fig:array-communicator}{{9}{17}{The general architecture of a HighP5 communicator responsible for communicating array parts.\relax }{figure.caption.9}{}}
 \newlabel{luf-comm}{{8}{17}{A part of the thread run function of block-LU factorization interim C++ code illustrating use of an array communicator}{lstlisting.0.0.8}{}}
@@ -210,9 +212,9 @@
 \bibcite{Dongarra2011}{{1}{Dongarra and Luszczek}{{Dongarra and Luszczek}}{{}}}
 \bibcite{10485138}{{2}{Atchley et~al.}{{Atchley, Zimmer, Lange, Bernholdt, Melesse~Vergara, Beck, Brim, Budiardja, Chandrasekaran, Eisenbach, Evans, Ezell, Frontiere, Georgiadou, Glenski, Grete, Hamilton, Holmen, Huebl, Jacobson, Joubert, McMahon, Merzari, Moore, Myers, Nichols, Oral, Papatheodore, Perez, Rogers, Schneider, Vay, and Yeung}}{{}}}
 \bibcite{10.1145/158439.158907}{{3}{Lilja}{{Lilja}}{{}}}
-\bibcite{Snyder:1986:TAS:17814.17826}{{4}{Snyder}{{Snyder}}{{}}}
 \@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{24}{section.10}\protected@file@percent }
 \newlabel{sec:conclusion}{{10}{24}{Conclusion}{section.10}{}}
+\bibcite{Snyder:1986:TAS:17814.17826}{{4}{Snyder}{{Snyder}}{{}}}
 \bibcite{10.1145/42411.42415}{{5}{Gustafson}{{Gustafson}}{{}}}
 \bibcite{Foster:1995:DBP:527029}{{6}{Foster}{{Foster}}{{}}}
 \bibcite{Walker96mpi:a}{{7}{Walker et~al.}{{Walker, Walker, Dongarra, and Dongarra}}{{}}}
@@ -271,11 +273,12 @@
 \bibcite{yanAndrewPCubeS}{{60}{Yanhaona and Grimshaw}{{Yanhaona and Grimshaw}}{{}}}
 \bibcite{Rajaraman2023}{{61}{Rajaraman}{{Rajaraman}}{{}}}
 \bibcite{kamil2013hierarchical}{{62}{Kamil and Yelick}{{Kamil and Yelick}}{{}}}
-\bibcite{10.1007/BFb0038655}{{63}{Hiranandani et~al.}{{Hiranandani, Kennedy, Koelbel, Kremer, and Tseng}}{{}}}
-\bibcite{10.1007/978-3-030-34627-0_11}{{64}{Bonachea and Hargrove}{{Bonachea and Hargrove}}{{}}}
-\bibcite{6312198}{{65}{Pfister and Norton}{{Pfister and Norton}}{{}}}
-\bibcite{9492415}{{66}{Matsuoka}{{Matsuoka}}{{}}}
-\bibcite{9658212}{{67}{Sato et~al.}{{Sato, Kodama, Tsuji, and Odajima}}{{}}}
-\bibcite{asanovic2006landscape}{{68}{Asanovic et~al.}{{Asanovic, Bodik, Catanzaro, Gebis, Husbands, Keutzer, Patterson, Plishker, Shalf, Williams, et~al.}}{{}}}
+\bibcite{Sakamoto2012}{{63}{Sakamoto and Furumoto}{{Sakamoto and Furumoto}}{{}}}
+\bibcite{10.1007/BFb0038655}{{64}{Hiranandani et~al.}{{Hiranandani, Kennedy, Koelbel, Kremer, and Tseng}}{{}}}
+\bibcite{10.1007/978-3-030-34627-0_11}{{65}{Bonachea and Hargrove}{{Bonachea and Hargrove}}{{}}}
+\bibcite{6312198}{{66}{Pfister and Norton}{{Pfister and Norton}}{{}}}
+\bibcite{9492415}{{67}{Matsuoka}{{Matsuoka}}{{}}}
+\bibcite{9658212}{{68}{Sato et~al.}{{Sato, Kodama, Tsuji, and Odajima}}{{}}}
+\bibcite{asanovic2006landscape}{{69}{Asanovic et~al.}{{Asanovic, Bodik, Catanzaro, Gebis, Husbands, Keutzer, Patterson, Plishker, Shalf, Williams, et~al.}}{{}}}
 \FirstPg{1}\LastPg{27}
 \gdef \@abspage@last{27}

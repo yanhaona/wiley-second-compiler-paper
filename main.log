@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  4 OCT 2026 22:19
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  7 OCT 2026 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1913,12 +1913,12 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 3657) in paragraph at lines 290--292
 []\TU/lmr/m/n/9.03374 Hardware-cognizant parallel programming is inherently
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2017,15 +2017,19 @@ File: ./images//Figures/compilation/runtime-model.eps Graphic file (type eps)
 File: ./images//Figures/compilation/ppu-controller-model.eps Graphic file (type
  eps)
 <./images//Figures/compilation/ppu-controller-model.eps>
-File: ./images//Figures/compilation/compiler-breackdown.eps Graphic file (type 
-eps)
-<./images//Figures/compilation/compiler-breackdown.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[9] (./Programs/block-luf-stages.p
+[9]
+File: ./images//Figures/compilation/compiler-breackdown.eps Graphic file (type 
+eps)
+<./images//Figures/compilation/compiler-breackdown.eps>
+ (./Programs/block-luf-stages.p
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2060,6 +2064,9 @@ erating
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2076,9 +2083,6 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 
 LaTeX Warning: Command \texttimes invalid in math mode on input line 539.
 
-File: ./images//Figures/compilation/part-container-tree-search.eps Graphic file
- (type eps)
-<./images//Figures/compilation/part-container-tree-search.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2087,7 +2091,11 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[13] (./Programs/c-code/block_luf_part1.cc
+[13]
+File: ./images//Figures/compilation/part-container-tree-search.eps Graphic file
+ (type eps)
+<./images//Figures/compilation/part-container-tree-search.eps>
+ (./Programs/c-code/block_luf_part1.cc
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -2122,15 +2130,18 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[14])
+[14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [15] (./Programs/c-code/block_luf_sync.cc
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2154,7 +2165,11 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
  file (type eps)
 <./images//Figures/compilation/array-communicator-architecture.eps>
- (./Programs/c-code/block_lu_comm.cc
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+(./Programs/c-code/block_lu_comm.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2176,18 +2191,11 @@ File: ./images//Figures/compilation/confinement-to-comm-pri.eps Graphic file (t
 ype eps)
 <./images//Figures/compilation/confinement-to-comm-pri.eps>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./Programs/Conjugate-Gradient.p
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[18]
+[18] (./Programs/Conjugate-Gradient.p
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2200,17 +2208,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 10000) detected at line 668
 []
  []
@@ -2238,6 +2240,9 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
@@ -2377,12 +2382,12 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 ### simple group (level 1) entered at line 228 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 41473 strings out of 476191
- 793016 string characters out of 5812073
- 1399310 words of memory out of 5000000
- 61338 multiletter control sequences out of 15000+600000
+ 41476 strings out of 476191
+ 793076 string characters out of 5812073
+ 1401160 words of memory out of 5000000
+ 61341 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
- 98i,19n,94p,2087b,1917s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,19n,94p,2087b,1921s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (27 pages).

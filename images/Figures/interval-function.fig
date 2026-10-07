@@ -99,7 +99,6 @@ Single
 4 0 0 50 -1 1 14 0.0000 4 135 90 3600 9900 1\001
 4 0 0 50 -1 32 14 0.0000 4 90 90 5535 10260 r\001
 4 0 0 50 -1 1 14 0.0000 4 135 90 6660 6570 2\001
-4 0 0 50 -1 0 14 0.0000 4 165 7200 6840 6480 * 5 is the assumed consecutive index range available for partitioning in Space B\001
 4 0 0 50 -1 32 14 0.0000 4 90 90 6525 6435 z\001
 4 0 0 50 -1 0 14 0.0000 4 60 90 6300 6480 =\001
 4 0 0 50 -1 0 14 0.0000 4 165 9000 9270 7380 The overall size of the data in Space B from the perspective of all Space B LPUs under a Space A LPU\001
@@ -109,3 +108,4 @@ Single
 4 0 0 50 -1 0 14 0.0000 4 165 13680 8505 8865 Block count interval function specifying the index range allocated to LPU 1 of Space B according to the data confined within the container Space A LPU 1\001
 4 0 0 50 -1 0 14 0.0000 4 165 5310 16830 9225 assuming block count configuration is using only two blocks\001
 4 0 0 50 -1 0 14 0.0000 4 165 6480 12735 10890 The actual index range of the array assigned to the first LPU of Space B\001
+4 0 0 50 -1 0 14 0.0000 4 165 8460 6840 6480 * 5 is the length of the assumed consecutive index range available for partitioning in Space B\001

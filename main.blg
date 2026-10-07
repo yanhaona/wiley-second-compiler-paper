@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: wileyNJD-Chicago.bst
-Illegal, another \bibstyle command---line 208 of file main.aux
+Illegal, another \bibstyle command---line 210 of file main.aux
  : \bibstyle
  :          {wileyNJD-Chicago}
 I'm skipping whatever remains of this command
@@ -225,6 +225,10 @@ You can't pop an empty literal stack for entry 10.5555/1623264.1623335
 while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 10.5555/1623264.1623335
 while executing---line 1806 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry Sakamoto2012
+while executing---line 1806 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry Sakamoto2012
+while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 10.1145/1229428.1229483
 while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 10.1145/1229428.1229483
@@ -434,6 +438,12 @@ while executing---line 1808 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 10.1145/1229428.1229483
 while executing---line 1808 of file wileyNJD-Chicago.bst
 "" is a string literal, not a function, for entry 10.1145/1229428.1229483
+while executing---line 1808 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry Sakamoto2012
+while executing---line 1808 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry Sakamoto2012
+while executing---line 1808 of file wileyNJD-Chicago.bst
+"" is a string literal, not a function, for entry Sakamoto2012
 while executing---line 1808 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 10.5555/1623264.1623335
 while executing---line 1808 of file wileyNJD-Chicago.bst
@@ -873,6 +883,10 @@ ptr=1, stack=
 while executing---line 1841 of file wileyNJD-Chicago.bst
 ptr=1, stack=
 
+---the literal stack isn't empty for entry Sakamoto2012
+while executing---line 1841 of file wileyNJD-Chicago.bst
+ptr=1, stack=
+
 ---the literal stack isn't empty for entry 10.1007/BFb0038655
 while executing---line 1841 of file wileyNJD-Chicago.bst
 ptr=1, stack=
@@ -881,45 +895,45 @@ ptr=1, stack=
 while executing---line 1841 of file wileyNJD-Chicago.bst
 Warning--no number and no volume in asanovic2006landscape
 Warning--page numbers missing in asanovic2006landscape
-You've used 68 entries,
+You've used 69 entries,
             2960 wiz_defined-function locations,
-            1056 strings with 19716 characters,
-and the built_in function-call counts, 35619 in all, are:
-= -- 2554
-> -- 2962
-< -- 29
-+ -- 1020
-- -- 946
-* -- 3408
-:= -- 6412
-add.period$ -- 195
-call.type$ -- 68
-change.case$ -- 70
-chr.to.int$ -- 68
-cite$ -- 80
-duplicate$ -- 1173
-empty$ -- 2305
-format.name$ -- 1042
-if$ -- 7101
+            1064 strings with 19884 characters,
+and the built_in function-call counts, 36155 in all, are:
+= -- 2603
+> -- 2989
+< -- 30
++ -- 1030
+- -- 956
+* -- 3445
+:= -- 6498
+add.period$ -- 198
+call.type$ -- 69
+change.case$ -- 71
+chr.to.int$ -- 69
+cite$ -- 81
+duplicate$ -- 1194
+empty$ -- 2345
+format.name$ -- 1054
+if$ -- 7216
 int.to.chr$ -- 1
-int.to.str$ -- 69
-missing$ -- 72
-newline$ -- 338
-num.names$ -- 352
-pop$ -- 290
+int.to.str$ -- 70
+missing$ -- 74
+newline$ -- 343
+num.names$ -- 357
+pop$ -- 297
 preamble$ -- 1
-purify$ -- 204
+purify$ -- 207
 quote$ -- 0
-skip$ -- 899
+skip$ -- 920
 stack$ -- 0
-substring$ -- 1515
-swap$ -- 572
-text.length$ -- 29
+substring$ -- 1551
+swap$ -- 585
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 520
+type$ -- 524
 warning$ -- 12
-while$ -- 366
+while$ -- 374
 width$ -- 0
-write$ -- 946
-(There were 396 error messages)
+write$ -- 961
+(There were 402 error messages)
