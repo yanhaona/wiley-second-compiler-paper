@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  8 OCT 2026 19:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  8 OCT 2026 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2242,16 +2242,19 @@ File: ./images//Figures/charts/bluf-diff-versions-performance.pdf Graphic file
 (type pdf)
 <use ./images//Figures/charts/bluf-diff-versions-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 797--797
+Underfull \hbox (badness 3758) in paragraph at lines 798--798
 []\TU/lmr/bx/n/8 FIGURE 15 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: ./images//Figures/charts/stencil-diff-versions-performance.pdf Graphic fi
 le (type pdf)
 <use ./images//Figures/charts/stencil-diff-versions-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 806--806
+Underfull \hbox (badness 3758) in paragraph at lines 807--807
 []\TU/lmr/bx/n/8 FIGURE 16 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2260,7 +2263,7 @@ File: ./images//Figures/charts/cg-diff-version-performance.pdf Graphic file (ty
 pe pdf)
 <use ./images//Figures/charts/cg-diff-version-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 817--817
+Underfull \hbox (badness 3758) in paragraph at lines 818--818
 []\TU/lmr/bx/n/8 FIGURE 17 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2270,17 +2273,17 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[23] (./main.bbl
+[23]
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[24] (./main.bbl
 Underfull \hbox (badness 5893) in paragraph at lines 20--31
 \TU/lmr/m/n/8.5 Michael J. Brim, Reuben Budiardja, Sunita Chan-
  []
 
 
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[24]
 Underfull \hbox (badness 1194) in paragraph at lines 67--70
 []\TU/lmr/m/n/8.5 David R. Butenhof 1997.  \TU/lmr/m/it/8.5 Programming with PO
 SIX
@@ -2292,13 +2295,19 @@ Underfull \hbox (badness 3364) in paragraph at lines 126--131
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 3058) in paragraph at lines 135--142
 \TU/lmr/m/n/8.5 Xavier Martorell, C. Chris Erway, José E. Moreira,
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[25]
 ! Misplaced alignment tab character &.
 l.251 ...formance Fortran.''  {\it IEEE Parallel &
                                                    Distributed
@@ -2320,17 +2329,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[25]
 Underfull \hbox (badness 2142) in paragraph at lines 351--357
 []\TU/lmr/m/n/8.5 Kathy Yelick, Luigi Semenzato, Geoff Pike, Carleton
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 ! Misplaced alignment tab character &.
 l.379   Symposium on Parallel &
@@ -2341,9 +2346,6 @@ simple: Just type `I\&' now. But if some right brace
 up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1910) in paragraph at lines 443--448

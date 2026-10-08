@@ -789,6 +789,7 @@ To understand the effectiveness of various compilation techniques for improving 
     \item \textbf{Version 4} (Disable Parallel Initialization): turns off parallelization in data structure setup and input processing during task launching from Version 3.
     \item \textbf{Version 5} (Disable Sync Primitive Optimization): reverts back to a less sophisticated implementation of synchronization using more semaphore and condition variables from Version 4.
 \end{enumerate}
+Note that Version 4 represents the state of the compiler during the previous publication on the HighP5 language \citep{yanhaona2024highp5}. Even then, the performance of HighP5 programs was competitive with that of the reference programs. The reason we had to add several other optimization techniques to reach competitive performance on Fugaku is that a faster machine and a higher degree of parallelism expose more limitations at scale. These limitations were not apparent on slower execution platforms, where costly communications dominate execution times. 
 
 Figure \ref{fig:chart-bluf-diff-version} illustrates how the performance of block LU factorization deteriorates at each step compared to the performance of the HighP5 baseline version. 
 \begin{figure}[htb]
