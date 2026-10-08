@@ -693,6 +693,41 @@ In particular, we were interested in assessing how HighP5 programs fare against 
 	}
 	\label{tab:problem-char}
 \end{table*}
+{\color{red}
+Table \ref{tab:problem-loc-wc} presents the lines of code (LOC) and word count (WC) comparison between the corresponding HighP5 and reference implementations of the building-block applications. Although a lines of code measurement does not expose the cognitive burden involved in programming, the significant brevity of HighP5 implementations compared to the reference to achieve similar kinds of performance tuning indicates that HighP5 programs are easier to write and reason about.
+\begin{table}[tb]
+	\caption{Lines of Code (LOC) and Word Count (WC) Comparison Between HighP5 and Referecent Implementations of Building-block Applications.}
+	\small
+	\centering
+	\resizebox{\columnwidth}{!}{
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			\hline
+			& \textbf{HighP5 LOC} & \textbf{Reference LOC} & \textbf{HighP5 WC} & \textbf{Reference WC}  \\
+			%\hline
+			\textbf{Block LU Factorization} 
+			& 150 
+			& 454
+			& 686 
+			& 2410 \\
+			%\hline
+			\textbf{Finite Value Estimation} 
+			& 57
+			& 238
+			& 237 
+			& 1137 \\
+			%\hline	
+			\textbf{Conjugate Gradient} 
+			& 92  
+			& 293
+			& 381
+			& 1351 \\ 
+			\hline \hline
+		\end{tabular}
+	}
+	\label{tab:problem-loc-wc}
+\end{table}
+}
 
 As the reference implementations are pure MPI codes, we used multiple MPI processes per node when running them. Although Fugaku compute nodes have 48 cores, we found that the reference MPI implementations' performance do not improve -- rather, they slightly degrade -- if more than 32 cores per node are used. Hence, block LU factorization and 5-point stencil reference programs were run with $32$ MPI processes per node configuration. However, for the conjugate gradient program, the number of processes per node was further reduced to eight. This is because the Fugaku environment has a limit of $30$ GB memory per node for programs and the input sparse matrix of the conjugate gradient is replicated in all processes, causing a memory fault for large inputs if we increased the process count beyond that. Therefore, the PCubeS model of the platform for HighP5 compiler is also adjusted to have the same degrees of parallelism per-node to maintain parity with the reference codes. However, the HighP5 compiler generates MPI+Pthreads hybrid program as discussed in the earlier section where there is one process per node and intra-node parallelism is achieved using Pthreads (we made an exception to this nature by changing the PCubeS model of the platform during conjugate gradient program compilation for a reason that we will explain later). Furthermore, the operating system installed on the compute nodes of Fugaku does not expose the physical core to logical core ID mapping in the \textit{/proc/cpuinfo} file. Neither does it provide information regarding which core groups share what L2 cache segment. These are information that the HighP5 compiler uses for careful pinning of Pthreads to cores that maximizes cache sharing and reduces synchronization costs. Therefore, the HighP5 versions were slightly at disadvantage that could not be overcome. The reference and HighP5 codes for each node configuration were run 10 times. The standard deviations in 10 runs for all programs are insignificant compared to the average execution times.  
 
