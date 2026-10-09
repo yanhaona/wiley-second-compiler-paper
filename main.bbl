@@ -1,4 +1,4 @@
-\begin{thebibliography}{69}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -506,6 +506,13 @@ Dan Bonachea, and Paul~H. Hargrove. 2019.
   Exascale.''   In {\it Languages and Compilers for Parallel Computing}, edited
   by Mary Hall and Hari Sundar,   138--158.
 \newblock Cham: Springer International Publishing.
+
+\bibitem[\protect\citeauthoryear{Gropp, Lusk, and Swider}{Gropp
+  et~al.}{}]{gropp1999improving}
+William Gropp, Ewing Lusk,, and Deborah Swider. 1999.
+\newblock ``Improving the performance of MPI derived datatypes.''   In {\it
+  Proceedings of the Third MPI Developer’s and User’s Conference},
+  25--30.
 
 \bibitem[\protect\citeauthoryear{Pfister and Norton}{Pfister and
   Norton}{}]{6312198}

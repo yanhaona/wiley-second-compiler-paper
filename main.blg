@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: wileyNJD-Chicago.bst
-Illegal, another \bibstyle command---line 217 of file main.aux
+Illegal, another \bibstyle command---line 218 of file main.aux
  : \bibstyle
  :          {wileyNJD-Chicago}
 I'm skipping whatever remains of this command
@@ -120,6 +120,10 @@ while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 6490322
 while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 6490322
+while executing---line 1806 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry gropp1999improving
+while executing---line 1806 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry gropp1999improving
 while executing---line 1806 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry GURD198549
 while executing---line 1806 of file wileyNJD-Chicago.bst
@@ -601,6 +605,12 @@ You can't pop an empty literal stack for entry GURD198549
 while executing---line 1808 of file wileyNJD-Chicago.bst
 "" is a string literal, not a function, for entry GURD198549
 while executing---line 1808 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry gropp1999improving
+while executing---line 1808 of file wileyNJD-Chicago.bst
+You can't pop an empty literal stack for entry gropp1999improving
+while executing---line 1808 of file wileyNJD-Chicago.bst
+"" is a string literal, not a function, for entry gropp1999improving
+while executing---line 1808 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 6490322
 while executing---line 1808 of file wileyNJD-Chicago.bst
 You can't pop an empty literal stack for entry 6490322
@@ -893,47 +903,51 @@ ptr=1, stack=
 
 ---the literal stack isn't empty for entry 10.1007/978-3-030-34627-0_11
 while executing---line 1841 of file wileyNJD-Chicago.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry gropp1999improving
+while executing---line 1841 of file wileyNJD-Chicago.bst
 Warning--no number and no volume in asanovic2006landscape
 Warning--page numbers missing in asanovic2006landscape
-You've used 69 entries,
+You've used 70 entries,
             2960 wiz_defined-function locations,
-            1064 strings with 19884 characters,
-and the built_in function-call counts, 36155 in all, are:
-= -- 2603
-> -- 2989
-< -- 30
-+ -- 1030
-- -- 956
-* -- 3445
-:= -- 6498
-add.period$ -- 198
-call.type$ -- 69
-change.case$ -- 71
-chr.to.int$ -- 69
-cite$ -- 81
-duplicate$ -- 1194
-empty$ -- 2345
-format.name$ -- 1054
-if$ -- 7216
+            1069 strings with 20074 characters,
+and the built_in function-call counts, 36687 in all, are:
+= -- 2648
+> -- 3021
+< -- 31
++ -- 1041
+- -- 965
+* -- 3490
+:= -- 6584
+add.period$ -- 200
+call.type$ -- 70
+change.case$ -- 72
+chr.to.int$ -- 70
+cite$ -- 82
+duplicate$ -- 1217
+empty$ -- 2387
+format.name$ -- 1065
+if$ -- 7332
 int.to.chr$ -- 1
-int.to.str$ -- 70
-missing$ -- 74
-newline$ -- 343
-num.names$ -- 357
-pop$ -- 297
+int.to.str$ -- 71
+missing$ -- 75
+newline$ -- 347
+num.names$ -- 362
+pop$ -- 305
 preamble$ -- 1
-purify$ -- 207
+purify$ -- 210
 quote$ -- 0
-skip$ -- 920
+skip$ -- 936
 stack$ -- 0
-substring$ -- 1551
-swap$ -- 585
-text.length$ -- 30
+substring$ -- 1579
+swap$ -- 596
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 524
+type$ -- 532
 warning$ -- 12
-while$ -- 374
+while$ -- 380
 width$ -- 0
-write$ -- 961
-(There were 402 error messages)
+write$ -- 974
+(There were 408 error messages)
