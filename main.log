@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  8 OCT 2026 23:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.5.4)  9 OCT 2026 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1910,28 +1910,36 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [4]
-Underfull \hbox (badness 3657) in paragraph at lines 297--299
+Underfull \hbox (badness 3657) in paragraph at lines 297--298
 []\TU/lmr/m/n/9.03374 Hardware-cognizant parallel programming is inherently
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 304.
+put line 306.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9.03374> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 306.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 308.
 File: ./images//Figures/block-LUF-scheme.eps Graphic file (type eps)
 <./images//Figures/block-LUF-scheme.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[5] (./Programs/Block-LUF.p
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+(./Programs/Block-LUF.p
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 1.
 
@@ -1948,9 +1956,6 @@ and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <7> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3.
-
-Overfull \vbox (1.33119pt too high) has occurred while \output is active []
-
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
@@ -1986,16 +1991,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) detected at line 8
-[]
- []
-
-)
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
 [7]
+Underfull \hbox (badness 10000) detected at line 8
+[]
+ []
+
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2006,12 +2011,12 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 [8]
 File: ./images//Figures/compilation/runtime-model.eps Graphic file (type eps)
 <./images//Figures/compilation/runtime-model.eps>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: ./images//Figures/compilation/ppu-controller-model.eps Graphic file (type
  eps)
 <./images//Figures/compilation/ppu-controller-model.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
@@ -2039,24 +2044,21 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [10]
-Underfull \hbox (badness 1024) in paragraph at lines 455--456
+Underfull \hbox (badness 1024) in paragraph at lines 457--458
 []\TU/lmr/m/n/9.03374 Similarly, the environment management mechanism and
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 461--462
+Underfull \hbox (badness 2884) in paragraph at lines 463--464
 []\TU/lmr/bx/n/9.03374 Synchronization and Communication\TU/lmr/m/n/9.03374 : i
 nvolves
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 462--463
+Underfull \hbox (badness 5622) in paragraph at lines 464--465
 []\TU/lmr/bx/n/9.03374 Environment Management\TU/lmr/m/n/9.03374 : involves gen
 erating
  []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
@@ -2073,7 +2075,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 
 [12]
 
-LaTeX Warning: Command \texttimes invalid in math mode on input line 546.
+LaTeX Warning: Command \texttimes invalid in math mode on input line 548.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2106,6 +2108,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ) (./Programs/c-code/block_luf_part2.cc
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.76537pt too wide) has occurred while \output is active
+[]| 
+ []
+
+[14]
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2117,23 +2127,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (261.76537pt too wide) has occurred while \output is active
-[]| 
- []
-
-[14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
 Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 []| 
  []
 
-[15] (./Programs/c-code/block_luf_sync.cc
+[15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+(./Programs/c-code/block_luf_sync.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2157,11 +2160,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 File: ./images//Figures/compilation/array-communicator-architecture.eps Graphic
  file (type eps)
 <./images//Figures/compilation/array-communicator-architecture.eps>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./Programs/c-code/block_lu_comm.cc
+ (./Programs/c-code/block_lu_comm.cc
 ! Undefined control sequence.
 \lst@basicstyle ->\footnotesize \singlespacing 
                                                
@@ -2205,7 +2204,10 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
  []
 
 [19]
-Underfull \hbox (badness 10000) detected at line 675
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) detected at line 677
 []
  []
 
@@ -2242,28 +2244,28 @@ File: ./images//Figures/charts/bluf-diff-versions-performance.pdf Graphic file
 (type pdf)
 <use ./images//Figures/charts/bluf-diff-versions-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 798--798
+Underfull \hbox (badness 3758) in paragraph at lines 800--800
 []\TU/lmr/bx/n/8 FIGURE 15 \TU/lmr/m/n/8 |  Normalized execution times of diffe
+rent
+ []
+
+File: ./images//Figures/charts/stencil-diff-versions-performance.pdf Graphic fi
+le (type pdf)
+<use ./images//Figures/charts/stencil-diff-versions-performance.pdf>
+
+Underfull \hbox (badness 3758) in paragraph at lines 809--809
+[]\TU/lmr/bx/n/8 FIGURE 16 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ./images//Figures/charts/stencil-diff-versions-performance.pdf Graphic fi
-le (type pdf)
-<use ./images//Figures/charts/stencil-diff-versions-performance.pdf>
-
-Underfull \hbox (badness 3758) in paragraph at lines 807--807
-[]\TU/lmr/bx/n/8 FIGURE 16 \TU/lmr/m/n/8 |  Normalized execution times of diffe
-rent
- []
-
 File: ./images//Figures/charts/cg-diff-version-performance.pdf Graphic file (ty
 pe pdf)
 <use ./images//Figures/charts/cg-diff-version-performance.pdf>
 
-Underfull \hbox (badness 3758) in paragraph at lines 818--818
+Underfull \hbox (badness 3758) in paragraph at lines 820--820
 []\TU/lmr/bx/n/8 FIGURE 17 \TU/lmr/m/n/8 |  Normalized execution times of diffe
 rent
  []
@@ -2374,7 +2376,7 @@ Overfull \hbox (261.76537pt too wide) has occurred while \output is active
 Here is how much of TeX's memory you used:
  41479 strings out of 476191
  793111 string characters out of 5812073
- 1401324 words of memory out of 5000000
+ 1402324 words of memory out of 5000000
  61344 multiletter control sequences out of 15000+600000
  542210 words of font info for 223 fonts, out of 8000000 for 9000
  1374 hyphenation exceptions out of 8191
